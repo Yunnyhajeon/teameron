@@ -11,7 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 public class medical_guide_fragment extends Fragment {
-    Button home_btn;
+    Button home_btn, bld_pressure_btn, child_temp_btn, breast_exam_btn, medication_btn  ;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -24,6 +24,11 @@ public class medical_guide_fragment extends Fragment {
 
             }
         });
+
+        bld_pressure_btn = view.findViewById(R.id.bld_pressure_btn);
+        child_temp_btn = view.findViewById(R.id.child_temp_btn);
+        breast_exam_btn = view.findViewById(R.id.breast_exam_btn);
+        medication_btn = view.findViewById(R.id.medication_btn);
         return view;
 
     }

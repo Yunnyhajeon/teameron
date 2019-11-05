@@ -11,7 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 public class emergency_guide_fragment extends Fragment {
-    Button home_btn;
+    Button home_btn, CPR_btn, choking_btn, bleeding_btn;
 
     @Nullable
     @Override
@@ -25,6 +25,11 @@ public class emergency_guide_fragment extends Fragment {
 
             }
         });
+
+        CPR_btn = view.findViewById(R.id.CPR_btn);
+        choking_btn = view.findViewById(R.id.choking_btn);
+        bleeding_btn = view.findViewById(R.id.bleeding_btn);
+
         return view;
 
     }

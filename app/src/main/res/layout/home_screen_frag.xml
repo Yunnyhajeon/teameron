@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2699FB">
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="306dp"
+        android:layout_height="65dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginRight="52dp"
+        android:gravity="center"
+        android:shadowColor="#FFFFFF"
+        android:text="Should I go to the ER"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/book_btn"
+        android:layout_width="160dp"
+        android:layout_height="130dp"
+        android:layout_below="@+id/textview"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="80dp"
+        android:background="@android:color/background_light"
+        android:drawableTop="@drawable/ic_import_contacts_24px"
+        android:paddingTop="20dp"
+        android:text="E-Book" />
+
+    <Button
+        android:id="@+id/medical_guide_btn"
+        android:layout_width="160dp"
+        android:layout_height="130dp"
+        android:layout_below="@+id/book_btn"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="42dp"
+        android:background="@android:color/background_light"
+        android:drawableTop="@drawable/ic_favorite_24px"
+        android:paddingTop="20dp"
+        android:text="Medical Guide" />
+
+    <Button
+        android:id="@+id/finder_btn"
+        android:layout_width="160dp"
+        android:layout_height="130dp"
+        android:layout_below="@+id/textview"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="42dp"
+        android:layout_marginLeft="42dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_toEndOf="@+id/book_btn"
+        android:layout_toRightOf="@+id/book_btn"
+        android:background="@android:color/background_light"
+        android:drawableTop="@drawable/ic_find_in_page_24px"
+        android:paddingTop="20dp"
+        android:text="Symptom Finder" />
+
+    <Button
+        android:id="@+id/emergency_guide_btn"
+        android:layout_width="160dp"
+        android:layout_height="130dp"
+        android:layout_below="@+id/finder_btn"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="42dp"
+        android:layout_marginLeft="42dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_toEndOf="@+id/medical_guide_btn"
+        android:layout_toRightOf="@+id/medical_guide_btn"
+        android:background="@android:color/background_light"
+        android:drawableTop="@drawable/ic_new_releases_24px"
+        android:paddingTop="20dp"
+        android:text="Emergency Guide" />
+
+    <Button
+        android:id="@+id/disclaimer_btn"
+        android:layout_width="220dp"
+        android:layout_height="75dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="#FFFFFF"
+        android:text="Disclaimer"
+        android:textColor="#2699FB"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/more_info_btn"
+        android:layout_width="220dp"
+        android:layout_height="75dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toEndOf="@+id/disclaimer_btn"
+        android:layout_toRightOf="@+id/disclaimer_btn"
+        android:background="#FFFFFF"
+        android:text="More Info"
+        android:textColor="#2699FB"
+        android:textStyle="bold" />
+
+</RelativeLayout>

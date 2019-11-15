@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:title="TITLE" />
+        <item
+            android:id="@+id/nav_discove_more"
+            android:title="DISCOVER MORE" />
+        <item
+            android:id="@+id/nav_table_of_contents"
+            android:title="TABLE OF CONTENTS" />
+        <item
+            android:id="@+id/nav_HEADS"
+            android:title="HEADS" />
+        <item
+            android:id="@+id/nav_ear_nose_throat_neck"
+            android:title="EAR, NOSE, THROAT, NECK" />
+        <item
+            android:id="@+id/arms_and_hands"
+            android:title="ARMS AND HANDS" />
+        <item
+            android:id="@+id/nav_breast"
+            android:title="BREAST" />
+        <item
+            android:id="@+id/nav_chest"
+            android:title="CHEST" />
+        <item
+            android:id="@+id/nav_abdomen"
+            android:title="ABDOMEN" />
+        <item
+            android:id="@+id/nav_genitalia"
+            android:title="GENITALIA" />
+        <item
+            android:id="@+id/nav_bowel"
+            android:title="BOWEL" />
+
+
+    </group>
+
+
+</menu>

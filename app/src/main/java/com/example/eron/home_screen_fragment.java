@@ -1,5 +1,6 @@
 package com.example.eron;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,7 +25,14 @@ public class home_screen_fragment extends Fragment implements View.OnClickListen
         disclaimer_btn = view.findViewById(R.id.disclaimer_btn);
         moreinfo_btn = view.findViewById(R.id.more_info_btn);
 
-        ebook_btn.setOnClickListener(this);
+//        ebook_btn.setOnClickListener(this);
+        ebook_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), ebook.class);
+                startActivity(i);
+            }
+        });
         finder_btn.setOnClickListener(this);
         medical_guide_btn.setOnClickListener(this);
         emergency_guide_btn.setOnClickListener(this);
@@ -36,10 +44,10 @@ public class home_screen_fragment extends Fragment implements View.OnClickListen
     public void onClick(View v) {
         Fragment selected_fragment = null;
         switch (v.getId()) {
-            case  R.id.book_btn: {
-                selected_fragment = new ebook_fragment();
-                break;
-            }
+//            case  R.id.book_btn: {
+//                selected_fragment = new ebook_fragment();
+//                break;
+//            }
             case R.id.finder_btn: {
                 selected_fragment = new finder_fragment();
                 break;

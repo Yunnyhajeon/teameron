@@ -30,9 +30,21 @@ public class ToolsFragment extends Fragment {
                 ViewModelProviders.of(this).get(ToolsViewModel.class);
         View root = inflater.inflate(R.layout.fragment_tools, container, false);
 
-        webView = root.findViewById(R.id.webview_head);
+        webView = root.findViewById(R.id.webview_head_headache);
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("file:///android_asset/tip196.html");
+        webView.loadUrl("file:///android_asset/part1_bodyparts/Head_1_Headache.html");
+
+        /*
+        webView = root.findViewById(R.id.webview_head_injury);
+        webView.setWebViewClient(new WebViewClient());
+        webView.loadUrl("file:///android_asset/part1_bodyparts/Head_2_HeadInjury.html");
+
+        webView = root.findViewById(R.id.webview_head_psychological);
+        webView.setWebViewClient(new WebViewClient());
+        webView.loadUrl("file:///android_asset/part1_bodyparts/Head_3_PsychologicalProblems.html");
+
+         */
+
 
 
         //        final TextView textView = root.findViewById(R.id.text_tools);

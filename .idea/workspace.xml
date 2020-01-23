@@ -1,69 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="d82613fa-3d6f-4109-b3a3-618413dba1f3" name="Default Changelist" comment="Appendices html files added to assets,">
-      <change afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileChanges/last-build.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.4.1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/appendices/appendixA/appendixA_15.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/appendices/appendixA/appendixA_page1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/appendices/appendixA/appendixA_page10.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/appendices/appendixA/appendixA_page11.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/appendices/appendixA/appendixA_page12.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/appendices/appendixA/appendixA_page13.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/appendices/appendixA/appendixA_page14.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/appendices/appendixA/appendixA_page2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/appendices/appendixA/appendixA_page3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/appendices/appendixA/appendixA_page4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/appendices/appendixA/appendixA_page5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/appendices/appendixA/appendixA_page6.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/appendices/appendixA/appendixA_page7.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/appendices/appendixA/appendixA_page8.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/appendices/appendixA/appendixA_page9.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/appendices/appendixB/appendixB_page01.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/appendices/appendixB/appendixB_page02.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/appendices/appendixB/appendixB_page03.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/appendices/appendixB/appendixB_page04.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/appendices/appendixC/appendixC_page01.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/appendices/appendixC/appendixC_page02.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/appendices/appendixC/appendixC_page03.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/appendices/appendixC/appendixC_page04.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/appendices/appendixC/appendixC_page05.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/appendices/appendixC/appendixC_page06.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/appendices/appendixC/appendixC_page07.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/appendices/appendixC/appendixC_page08.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/appendices/appendixC/appendixC_page09.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/appendices/appendixC/appendixC_page10.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/appendices/appendixC/appendixC_page11.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/appendices/appendixC/appendixC_page12.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/appendices/appendixC/appendixC_page13.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/appendices/appendixC/appendixC_page14.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/appendices/appendixC/appendixC_page15.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/appendices/appendixC/appendixC_page16.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/appendices/appendixC/appendixC_page17.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/appendices/appendixD/appendixD_page01.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/appendices/appendixD/appendixD_page02.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/appendices/appendixD/appendixD_page03.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/appendices/appendixD/appendixD_page04.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eron.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
+    <list default="true" id="f1dbfb13-10a9-44a4-9896-3ec1a86ef503" name="Default Changelist" comment="added part 3, 5, and half of part 1 to prepareMenuData()">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_android_29.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_navigation_navigation_ui_2_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_navigation_navigation_ui_2_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/Genitalia_2_Male and Female.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/Genitalia_2_Genders.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/Hips, Buttocks, Legs, and Ankles_1_Hips, Buttocks and Legs.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/HBLA_1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/Hips, Buttocks, Legs, and Ankles_2_Ankles.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/HBLA_2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/Menstruation (Periods), Menopause, and PMS_1_Irregular Periods.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/Menstruation_1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/Menstruation (Periods), Menopause, and PMS_2_Missed Periods.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/Menstruation_2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/Menstruation (Periods), Menopause, and PMS_3_Pain and PMS.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/Menstruation_3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/Menstruation (Periods), Menopause, and PMS_4_Bleeding After Menopause.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/Menstruation_4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/eron/ebook.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/eron/ebook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eron.iml" beforeDir="false" afterPath="$PROJECT_DIR$/eron.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,67 +36,101 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="AndroidEmu" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="971AY0Z0A8" />
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view />
+      </state>
+    </system>
+  </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/assets/appendices/appendixA/appendixA_page4.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
-              <caret line="48" column="14" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/assets/appendices/appendixA/appendixA_page6.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="59" column="14" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/assets/appendices/appendixC/appendixC_page16.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="38" column="14" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/assets/appendices/appendixA/appendixA_page1.html">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/eron/ebook.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="219">
+              <caret line="125" column="44" selection-start-line="125" selection-start-column="44" selection-end-line="125" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/assets/appendices/appendixD/appendixD_page04.html">
+        <entry file="file://$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/HBLA_1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+            <state relative-caret-position="180">
+              <caret line="35" column="12" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/assets/appendices/appendixC/appendixC_page05.html">
+        <entry file="file://$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/Menstruation_4.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="38" column="6" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
+            <state relative-caret-position="154">
+              <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/Menstruation_1.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="72" column="12" selection-start-line="72" selection-start-column="12" selection-end-line="72" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/assets/part5_prevention/Prevention_Error.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/Urine_1_Appearance.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/Urine_2_Discomfort.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/Urine_3_Frequency.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/Skin_4_Infections.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/Skin_7_Sores.html">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>findview</find>
+      <find>childlist</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -149,18 +145,13 @@
         <option value="$PROJECT_DIR$/app/src/main/assets/appendices/appendixD/appendixD_page04.html" />
         <option value="$PROJECT_DIR$/app/src/main/assets/appendices/appendixC/appendixC_page05.html" />
         <option value="$PROJECT_DIR$/app/src/main/assets/appendices/appendixA/appendixA_page1.html" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
-        <option value="$PROJECT_DIR$/.idea/gradle.xml" />
-        <option value="$PROJECT_DIR$/.idea/codeStyles/Project.xml" />
-        <option value="$PROJECT_DIR$/.idea/runConfigurations.xml" />
-        <option value="$PROJECT_DIR$/eron.iml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/assets/part5_prevention/Prevention of Errors in the Hospital_Accidents.html" />
+        <option value="$PROJECT_DIR$/app/src/main/assets/part5_prevention/Prevention of Errors in the Hospital_Introduction.html" />
+        <option value="$PROJECT_DIR$/app/src/main/assets/part5_prevention/Prevention_Error.html" />
+        <option value="$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/Menstruation_1.html" />
+        <option value="$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/HBLA_1.html" />
+        <option value="$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/Menstruation_4.html" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/eron/ebook.java" />
       </list>
     </option>
   </component>
@@ -177,8 +168,8 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -189,33 +180,24 @@
             <path>
               <item name="eron" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java (generated)" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="eron" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="assets" type="edd41e36:AndroidSourceTypeNode" />
             </path>
             <path>
               <item name="eron" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="assets" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="images" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="part1_bodyparts" type="cbb59c9e:AndroidPsiDirectoryNode" />
             </path>
             <path>
               <item name="eron" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="assets" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="appendices" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="eron" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="assets" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="appendices" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="appendixA" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="eron" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="assets" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="appendices" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="appendixB" type="462c0819:PsiDirectoryNode" />
+              <item name="part5_prevention" type="cbb59c9e:AndroidPsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -224,6 +206,8 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="971AY0Z0A8" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-01-23T04:40:06.042Z" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
@@ -250,7 +234,7 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="app" />
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
@@ -309,7 +293,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d82613fa-3d6f-4109-b3a3-618413dba1f3" name="Default Changelist" comment="" />
+      <changelist id="f1dbfb13-10a9-44a4-9896-3ec1a86ef503" name="Default Changelist" comment="" />
       <created>1579711563504</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -322,15 +306,22 @@
       <option name="project" value="LOCAL" />
       <updated>1579712735994</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="combined prevention of error html files into one for simplicity">
+      <created>1579749539536</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1579749539536</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.33370227" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.21633889" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -338,41 +329,57 @@
       <window_info id="Designer" order="6" />
       <window_info id="Resources Explorer" order="7" />
       <window_info id="Capture Tool" order="8" />
-      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.32937366" />
-      <window_info anchor="bottom" id="Version Control" order="0" />
-      <window_info anchor="bottom" id="Logcat" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" visible="true" weight="0.32993197" />
+      <window_info anchor="bottom" id="Debug" />
+      <window_info anchor="bottom" id="Version Control" order="0" weight="0.05102041" />
+      <window_info anchor="bottom" id="Logcat" order="1" weight="0.32993197" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Terminal" order="3" weight="0.33045357" />
       <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
-      <window_info anchor="bottom" id="Build" order="5" weight="0.3297414" />
-      <window_info anchor="bottom" id="Android Profiler" order="6" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Build" order="5" weight="0.3282313" />
+      <window_info anchor="bottom" id="Android Profiler" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.3282313" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.18683812" />
+      <window_info id="Structure" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="Build Variants" order="4" side_tool="true" />
+      <window_info id="Image Layers" order="5" />
+      <window_info id="Designer" order="6" />
+      <window_info id="Resources Explorer" order="7" />
+      <window_info id="Capture Tool" order="8" />
+      <window_info anchor="bottom" id="Run" order="0" visible="true" weight="0.32993197" />
+      <window_info anchor="bottom" id="Logcat" order="1" />
+      <window_info anchor="bottom" id="TODO" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" />
+      <window_info anchor="bottom" id="Terminal" order="4" weight="0.32993197" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5045386" side_tool="true" weight="0.2840136" />
+      <window_info anchor="bottom" id="Version Control" order="6" sideWeight="0.4977307" weight="0.32993197" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49546143" weight="0.2840136" />
+      <window_info anchor="bottom" id="Android Profiler" order="8" />
+      <window_info anchor="bottom" id="Messages" order="9" />
+      <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Gradle" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info active="true" anchor="right" id="Assistant" order="5" visible="true" weight="0.32980332" />
+    </layout-to-restore>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Appendices html files added to assets," />
-    <option name="LAST_COMMIT_MESSAGE" value="Appendices html files added to assets," />
+    <MESSAGE value="combined prevention of error html files into one for simplicity" />
+    <MESSAGE value="added part 3, 5, and half of part 1 to prepareMenuData()" />
+    <option name="LAST_COMMIT_MESSAGE" value="added part 3, 5, and half of part 1 to prepareMenuData()" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/assets/images/image001.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/assets/images/image002.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/assets/images/image003.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/assets/styles.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/assets/images/image020.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -498,6 +505,173 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/eron/ExpandableListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/Head_1_Headache.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-240" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/part5_prevention/Prevention of Errors in the Hospital_Hospital Policy.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="52" column="10" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="52" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/part5_prevention/Prevention of Errors in the Hospital_Sanitization.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="43" column="10" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="43" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/part5_prevention/Prevention of Errors in the Hospital_Mistaken Identity and Communication Errors.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="74" column="10" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="74" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/part5_prevention/Prevention of Errors in the Hospital_Medication.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="43" column="10" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="43" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/part5_prevention/Prevention of Errors in the Hospital_Secondary Conditions.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="103" column="10" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="103" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/part5_prevention/Prevention of Errors in the Hospital_Accidents.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="16" column="4" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="31" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/eron/ebook_fragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/Genitalia_1_Male.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/Groin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-148" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/HBLA_2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="12" lean-forward="true" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/Menstruation_2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="12" lean-forward="true" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/Menstruation_3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="12" lean-forward="true" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/Skin_1_Bites.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/Skin_2_Discolorations.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="12" lean-forward="true" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/Skin_3_Freckles, Moles, Bumps, Warts, Lumps, Plaques, and Patches.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="70" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/Skin_5_Itchy Skin.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/Skin_6_Rashes.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/Skin_7_Sores.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/Skin_4_Infections.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/Urine_1_Appearance.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/Urine_2_Discomfort.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/Urine_3_Frequency.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/part5_prevention/Prevention_Error.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/HBLA_1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="35" column="12" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/Menstruation_4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/part1_bodyparts/Menstruation_1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="72" column="12" selection-start-line="72" selection-start-column="12" selection-end-line="72" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/eron/ebook.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="125" column="44" selection-start-line="125" selection-start-column="44" selection-end-line="125" selection-end-column="44" />
         </state>
       </provider>
     </entry>

@@ -1,4 +1,7 @@
 
+.section_title, .subheading {
+    text-align:center;
+}
 .tip_number{
     font-weight:bold;
     font-size: 20px;

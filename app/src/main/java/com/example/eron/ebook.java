@@ -202,6 +202,7 @@ public class ebook extends AppCompatActivity {
                     MenuItemModel model = childList.get(headerList.get(groupPosition)).get(childPosition);
                     if (model.htmlUrl.length() > 0) {
                         //setContentView(R.layout.menu_item_content);
+                        parent.collapseGroup(groupPosition);
                         DrawerLayout drawer = findViewById(R.id.drawer_layout);
                         drawer.closeDrawer(GravityCompat.START, false);
                         WebView webView = (WebView) findViewById(R.id.menu_content_webview);

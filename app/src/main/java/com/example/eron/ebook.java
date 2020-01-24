@@ -162,8 +162,8 @@ public class ebook extends AppCompatActivity {
         headerItem = new MenuItemModel("Pregnancy and Postpregnancy", "file:///android_asset/part3_pregnancy/Pregnancy_and_Postpregnancy.html", true, false);
         headerList.add(headerItem);
         childList.put(headerItem, null); //there is no children list for this headerItem so we put null
-        */
 
+        */
 
 
         //Part 1 - Body Specific
@@ -339,9 +339,29 @@ public class ebook extends AppCompatActivity {
         childList.put(headerItem, children13);
 
 
-        //Part 2 - Yun
-
-
+        //Part 2 - Symptoms and Signs
+        headerItem = new MenuItemModel("Symptoms And Signs", "file:///android_asset/part2_SymptomsAndSigns/Allergic Reactions.html", true, true);
+        headerList.add(headerItem);
+        List<MenuItemModel> children14 = new ArrayList<>();
+        childItem = new MenuItemModel("Allergic Reactions", "file:///android_asset/part2_SymptomsAndSigns/Allergic Reactions.html", false, false);
+        children14.add(childItem);
+        childItem = new MenuItemModel("Blood And Blood Pressure", "file:///android_asset/part2_SymptomsAndSigns/Blood And Blood Pressure.html", false, false);
+        children14.add(childItem);
+        childItem = new MenuItemModel("Dehydration", "file:///android_asset/part2_SymptomsAndSigns/Dehydration.html", false, false);
+        children14.add(childItem);
+        childItem = new MenuItemModel("Fever", "file:///android_asset/part2_SymptomsAndSigns/Fever.html", false, false);
+        children14.add(childItem);
+        childItem = new MenuItemModel("Medication", "file:///android_asset/part2_SymptomsAndSigns/Medication.html", false, false);
+        children14.add(childItem);
+        childItem = new MenuItemModel("Passing Out, Loss of Consciousness", "file:///android_asset/part2_SymptomsAndSigns/Passing Out, Loss of Consciousness.html", false, false);
+        children14.add(childItem);
+        childItem = new MenuItemModel("Temperature Change", "file:///android_asset/part2_SymptomsAndSigns/Temperature Change.html", false, false);
+        children14.add(childItem);
+        childItem = new MenuItemModel("Weakness", "file:///android_asset/part2_SymptomsAndSigns/Weakness.html", false, false);
+        children14.add(childItem);
+        childItem = new MenuItemModel("Weight Loss", "file:///android_asset/part2_SymptomsAndSigns/Weight Loss.html", false, false);
+        children14.add(childItem);
+        childList.put(headerItem, children14);
 
         //Part 3 - Pregnancy
         headerItem = new MenuItemModel("Pregnancy and Postpregnancy", "file:///android_asset/part3_pregnancy/Pregnancy_and_Postpregnancy.html", true, false);
@@ -349,9 +369,41 @@ public class ebook extends AppCompatActivity {
         childList.put(headerItem, null);
 
 
-        //Part 4 - Mod
-
-
+        //Part 4 - Pediatrics
+        headerItem = new MenuItemModel("Part 4: Pediatrics", "file:///android_asset/part4_pediatrics/Head_1_Pediatric_Headache.html", true, true);
+        headerList.add(headerItem);
+        List<MenuItemModel> children15 = new ArrayList<>();
+        childItem = new MenuItemModel("Headache", "file:///android_asset/part4_pediatrics/Head_1_Pediatric_Headache.html", true, false);
+        children15.add(childItem);
+        childItem = new MenuItemModel("Psychological Problems", "file:///android_asset/part4_pediatrics/Pediatric_Psychological_Problems.html", true, false);
+        children15.add(childItem);
+        childItem = new MenuItemModel("Eyes", "file:///android_asset/part4_pediatrics/Pediatric_Eyes.html", true, false);
+        children15.add(childItem);
+        childItem = new MenuItemModel("Throat", "file:///android_asset/part4_pediatrics/Pediatric_Throat.html", true, false);
+        children15.add(childItem);
+        childItem = new MenuItemModel("Arms, Hands, Fingers, and Nails", "file:///android_asset/part4_pediatrics/Pediatric_Arms_Hands_Fingers_Nails.html", true, false);
+        children15.add(childItem);
+        childItem = new MenuItemModel("Back", "file:///android_asset/part4_pediatrics/Pediatric_Back.html", true, false);
+        children15.add(childItem);
+        childItem = new MenuItemModel("Chest", "file:///android_asset/part4_pediatrics/Pediatric_Chest.html", true, false);
+        children15.add(childItem);
+        childItem = new MenuItemModel("Belly", "file:///android_asset/part4_pediatrics/Pediatric_Belly.html", true, false);
+        children15.add(childItem);
+        childItem = new MenuItemModel("Urine", "file:///android_asset/part4_pediatrics/Pediatric_Urine.html", true, false);
+        children15.add(childItem);
+        childItem = new MenuItemModel("Bowel Movements", "file:///android_asset/part4_pediatrics/Pediatric_Bowel_Movement.html", true, false);
+        children15.add(childItem);
+        childItem = new MenuItemModel("Genitalia", "file:///android_asset/part4_pediatrics/Pediatric_Genitalia.html", true, false);
+        children15.add(childItem);
+        childItem = new MenuItemModel("Legs", "file:///android_asset/part4_pediatrics/Pediatric_Legs.html", true, false);
+        children15.add(childItem);
+        childItem = new MenuItemModel("Skin and Hair", "file:///android_asset/part4_pediatrics/Pediatric_Skin_Hair.html", true, false);
+        children15.add(childItem);
+        childItem = new MenuItemModel("Allergic Reactions", "file:///android_asset/part4_pediatrics/Pediatric_Allergic_Reactions.html", true, false);
+        children15.add(childItem);
+        childItem = new MenuItemModel("Miscellaneous", "file:///android_asset/part4_pediatrics/Pediatric_Miscellaneous.html", true, false);
+        children15.add(childItem);
+        childList.put(headerItem, children15);
 
         //Part 5 - Prevention of Error
         headerItem = new MenuItemModel("Prevention of Errors in the Hospital", "file:///android_asset/part5_prevention/Prevention_Error.html", true, false);

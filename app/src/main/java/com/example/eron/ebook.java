@@ -166,27 +166,13 @@ public class ebook extends AppCompatActivity {
 
 
 
-        //starting from part 1 - Genitalia - these are in file order - NOT book order
-        MenuItemModel headerItem = new MenuItemModel("Genitalia", "file:///android_asset/part1_bodyparts/Genitalia_1_Male", true, true);
-        headerList.add(headerItem);
-        List<MenuItemModel> children = new ArrayList<>();
-        MenuItemModel childItem = new MenuItemModel("Male", "file:///android_asset/part1_bodyparts/Genitalia_1_Male", false, false);
-        children.add(childItem);
-        childItem = new MenuItemModel("Male and Female", "file:///android_asset/part1_bodyparts/Genitalia_2_Genders", false, false);
-        children.add(childItem);
-        childItem = new MenuItemModel("Female", "file:///android_asset/part1_bodyparts/Genitalia_3_Female", false, false);
-        children.add(childItem);
-        childList.put(headerItem, children);
+        //Part 1 - Body Specific
 
-        headerItem = new MenuItemModel("Groin", "file:///android_asset/part1_bodyparts/Groin.html", true, false);
-        headerList.add(headerItem);
-        childList.put(headerItem, null);
-
-        headerItem = new MenuItemModel("Head", "file:///android_asset/part1_bodyparts/Head_1_Headache.html", true, true);
+        MenuItemModel headerItem = new MenuItemModel("Head", "file:///android_asset/part1_bodyparts/Head_1_Headache.html", true, true);
         headerList.add(headerItem);
         List<MenuItemModel> children1 = new ArrayList<>();
         //there may be a better way but this is my attempt at a quick solution for now since we can't use clear()
-        childItem = new MenuItemModel("Headache", "file:///android_asset/part1_bodyparts/Head_1_Headache.html", false, false);
+        MenuItemModel childItem = new MenuItemModel("Headache", "file:///android_asset/part1_bodyparts/Head_1_Headache.html", false, false);
         children1.add(childItem);
         childItem = new MenuItemModel("Head Injury", "file:///android_asset/part1_bodyparts/Head_2_HeadInjury.html", false, false);
         children1.add(childItem);
@@ -194,81 +180,199 @@ public class ebook extends AppCompatActivity {
         children1.add(childItem);
         childList.put(headerItem, children1);
 
-        headerItem = new MenuItemModel("Hips, Buttocks, Legs, and Ankles", "file:///android_asset/part1_bodyparts/HBLA_1.html", true, true);
+        headerItem = new MenuItemModel("Eyes", "file:///android_asset/part1_bodyparts/Eyes_1_Eyelids.html", true, true);
         headerList.add(headerItem);
         List<MenuItemModel> children2 = new ArrayList<>();
-        childItem = new MenuItemModel("Hips, Buttocks and Legs", "file:///android_asset/part1_bodyparts/HBLA_1.html", false, false);
+        childItem = new MenuItemModel("Eyelids", "file:///android_asset/part1_bodyparts/Eyes_1_Eyelids.html", false, false);
         children2.add(childItem);
-        childItem = new MenuItemModel("Ankles", "file:///android_asset/part1_bodyparts/HBLA_2.html", false, false);
+        childItem = new MenuItemModel("Vision Abnormalities", "file:///android_asset/part1_bodyparts/Eyes_2_Vision_Abnormalities.html", false, false);
+        children2.add(childItem);
+        childItem = new MenuItemModel("Eye Pain", "file:///android_asset/part1_bodyparts/Eyes_3_Eye_Pain.html", false, false);
         children2.add(childItem);
         childList.put(headerItem, children2);
 
-        headerItem = new MenuItemModel("Menstruation (Periods), Menopause, and PMS", "file:///android_asset/part1_bodyparts/Menstruation_1.html", true, true);
+        headerItem = new MenuItemModel("Ear, Nose, Mouth, Throat, and Neck", "file:///android_asset/part1_bodyparts/Ear, Nose, Mouth, Throat, and Neck_1_Ear.html", true, true);
         headerList.add(headerItem);
         List<MenuItemModel> children3 = new ArrayList<>();
-        childItem = new MenuItemModel("Irregular Periods", "file:///android_asset/part1_bodyparts/Menstruation_1.html", false, false);
+        childItem = new MenuItemModel("Ear", "file:///android_asset/part1_bodyparts/Ear, Nose, Mouth, Throat, and Neck_1_Ear.html", false, false);
         children3.add(childItem);
-        childItem = new MenuItemModel("Missed Periods", "file:///android_asset/part1_bodyparts/Menstruation_2.html", false, false);
+        childItem = new MenuItemModel("Nose", "file:///android_asset/part1_bodyparts/Ear, Nose, Mouth, Throat, and Neck_2_Nose.html", false, false);
         children3.add(childItem);
-        childItem = new MenuItemModel("Pain and PMS", "file:///android_asset/part1_bodyparts/Menstruation_3.html", false, false);
+        childItem = new MenuItemModel("Mouth", "file:///android_asset/part1_bodyparts/Ear, Nose, Mouth, Throat, and Neck_3_Mouth.html", false, false);
         children3.add(childItem);
-        childItem = new MenuItemModel("Bleeding After Menopause", "file:///android_asset/part1_bodyparts/Menstruation_4.html", false, false);
+        childItem = new MenuItemModel("Throat", "file:///android_asset/part1_bodyparts/Ear, Nose, Mouth, Throat, and Neck_4_Throat.html", false, false);
+        children3.add(childItem);
+        childItem = new MenuItemModel("Neck", "file:///android_asset/part1_bodyparts/Ear, Nose, Mouth, Throat, and Neck_5_Neck.html", false, false);
         children3.add(childItem);
         childList.put(headerItem, children3);
 
-        headerItem = new MenuItemModel("Skin", "file:///android_asset/part1_bodyparts/Skin_1_Bites.html", true, true);
+        headerItem = new MenuItemModel("Arms and Hands", "file:///android_asset/part1_bodyparts/Arms and Hands_1_Armpits.html", true, true);
         headerList.add(headerItem);
         List<MenuItemModel> children4 = new ArrayList<>();
-        childItem = new MenuItemModel("Bites", "file:///android_asset/part1_bodyparts/Skin_1_Bites.html", false, false);
+        childItem = new MenuItemModel("Armpits", "file:///android_asset/part1_bodyparts/Arms and Hands_1_Armpits.html", false, false);
         children4.add(childItem);
-        childItem = new MenuItemModel("Discolorations", "file:///android_asset/part1_bodyparts/Skin_2_Discolorations.html", false, false);
+        childItem = new MenuItemModel("Arms", "file:///android_asset/part1_bodyparts/Arms and Hands_2_Arms.html", false, false);
         children4.add(childItem);
-        childItem = new MenuItemModel("Freckles, Moles, Bumps, Warts, Lumps, Plaques, and Patches", "file:///android_asset/part1_bodyparts/Skin_3_Freckles, Moles, Bumps, Warts, Lumps, Plaques, and Patches.html", false, false);
+        childItem = new MenuItemModel("Hands", "file:///android_asset/part1_bodyparts/Arms and Hands_3_Hands.html", false, false);
         children4.add(childItem);
-        childItem = new MenuItemModel("Infections", "file:///android_asset/part1_bodyparts/Skin_4_Infections.html.html", false, false);
+        childItem = new MenuItemModel("Fingers", "file:///android_asset/part1_bodyparts/Arms and Hands_4_Fingers.html", false, false);
         children4.add(childItem);
-        childItem = new MenuItemModel("Itchy Skin", "file:///android_asset/part1_bodyparts/Skin_5_Itchy Skin.html", false, false);
-        children4.add(childItem);
-        childItem = new MenuItemModel("Rashes", "file:///android_asset/part1_bodyparts/Skin_6_Rashes.html", false, false);
-        children4.add(childItem);
-        childItem = new MenuItemModel("Sores", "file:///android_asset/part1_bodyparts/Skin_7_Sores.html", false, false);
+        childItem = new MenuItemModel("Fingernails", "file:///android_asset/part1_bodyparts/Arms and Hands_5_Fingernails.html", false, false);
         children4.add(childItem);
         childList.put(headerItem, children4);
-        children.clear();
 
-        headerItem = new MenuItemModel("Urine", "file:///android_asset/part1_bodyparts/Urine_1_Appearance.html", true, true);
+        headerItem = new MenuItemModel("Breast", "file:///android_asset/part1_bodyparts/Breast.html", true, false);
+        headerList.add(headerItem);
+        childList.put(headerItem, null);
+
+        headerItem = new MenuItemModel("Chest Area", "file:///android_asset/part1_bodyparts/Chest Area_1_Breathing_Difficulties.html", true, true);
         headerList.add(headerItem);
         List<MenuItemModel> children5 = new ArrayList<>();
-        childItem = new MenuItemModel("Appearance", "file:///android_asset/part1_bodyparts/Urine_1_Appearance.html", false, false);
+        childItem = new MenuItemModel("Breathing Difficulties", "file:///android_asset/part1_bodyparts/Chest Area_1_Breathing_Difficulties.html", false, false);
         children5.add(childItem);
-        childItem = new MenuItemModel("Discomfort", "file:///android_asset/part1_bodyparts/Urine_2_Discomfort.html", false, false);
+        childItem = new MenuItemModel("Cough", "file:///android_asset/part1_bodyparts/Chest Area_2_Cough.html", false, false);
         children5.add(childItem);
-        childItem = new MenuItemModel("Frequency", "file:///android_asset/part1_bodyparts/Urine_3_Frequency.html", false, false);
+        childItem = new MenuItemModel("Chest Pain and Discomfort", "file:///android_asset/part1_bodyparts/Chest Area_3_Chest Pain and Discomfort.html", false, false);
+        children5.add(childItem);
+        childItem = new MenuItemModel("Irregular Heartbeats and Heart Sounds", "file:///android_asset/part1_bodyparts/Chest Area_4_Irregular Heartbeats and Heart Sounds.html", false, false);
         children5.add(childItem);
         childList.put(headerItem, children5);
 
-        //part 2
+        headerItem = new MenuItemModel("Belly, Stomach Area, Abdomen", "file:///android_asset/part1_bodyparts/Belly, Stomach Area, or Abdomen_1_How to Assess Belly Pain.html", true, true);
+        headerList.add(headerItem);
+        List<MenuItemModel> children6 = new ArrayList<>();
+        childItem = new MenuItemModel("How to Assess Belly Pain", "file:///android_asset/part1_bodyparts/Belly, Stomach Area, or Abdomen_1_How to Assess Belly Pain.html", false, false);
+        children6.add(childItem);
+        childItem = new MenuItemModel("Indigestion", "file:///android_asset/part1_bodyparts/Belly, Stomach Area, or Abdomen_2_Indigestion.html", false, false);
+        children6.add(childItem);
+        childItem = new MenuItemModel("Belly Pain", "file:///android_asset/part1_bodyparts/Belly, Stomach Area, or Abdomen_3_Belly Pain.html", false, false);
+        children6.add(childItem);
+        childItem = new MenuItemModel("Bulges and Swelling in the Belly", "file:///android_asset/part1_bodyparts/Belly, Stomach Area, or Abdomen_4_Bulges and Swelling in the Belly.html", false, false);
+        children6.add(childItem);
+        childItem = new MenuItemModel("Sense of Fullness", "file:///android_asset/part1_bodyparts/Belly, Stomach Area, or Abdomen_5_Sense of Fullness.html", false, false);
+        children6.add(childItem);
+        childList.put(headerItem, children6);
+
+        headerItem = new MenuItemModel("Genitalia", "file:///android_asset/part1_bodyparts/Genitalia_1_Male.html", true, true);
+        headerList.add(headerItem);
+        List<MenuItemModel> children7 = new ArrayList<>();
+        childItem = new MenuItemModel("Male", "file:///android_asset/part1_bodyparts/Genitalia_1_Male.html", false, false);
+        children7.add(childItem);
+        childItem = new MenuItemModel("Male and Female", "file:///android_asset/part1_bodyparts/Genitalia_2_Genders.html", false, false);
+        children7.add(childItem);
+        childItem = new MenuItemModel("Female", "file:///android_asset/part1_bodyparts/Genitalia_3_Female.html", false, false);
+        children7.add(childItem);
+        childList.put(headerItem, children7);
+
+        headerItem = new MenuItemModel("Bowel Movement", "file:///android_asset/part1_bodyparts/Bowel Movement_1_Pain.html", true, true);
+        headerList.add(headerItem);
+        List<MenuItemModel> children8 = new ArrayList<>();
+        childItem = new MenuItemModel("Pain", "file:///android_asset/part1_bodyparts/Bowel Movement_1_Pain.html", false, false);
+        children8.add(childItem);
+        childItem = new MenuItemModel("Form and Frequency", "file:///android_asset/part1_bodyparts/Bowel Movement_2_Form and Frequency.html", false, false);
+        children8.add(childItem);
+        childItem = new MenuItemModel("Color", "file:///android_asset/part1_bodyparts/Bowel Movement_3_Color.html", false, false);
+        children8.add(childItem);
+        childList.put(headerItem, children8);
+
+        headerItem = new MenuItemModel("Urine", "file:///android_asset/part1_bodyparts/Urine_1_Appearance.html", true, true);
+        headerList.add(headerItem);
+        List<MenuItemModel> children9 = new ArrayList<>();
+        childItem = new MenuItemModel("Appearance", "file:///android_asset/part1_bodyparts/Urine_1_Appearance.html", false, false);
+        children9.add(childItem);
+        childItem = new MenuItemModel("Discomfort", "file:///android_asset/part1_bodyparts/Urine_2_Discomfort.html", false, false);
+        children9.add(childItem);
+        childItem = new MenuItemModel("Frequency", "file:///android_asset/part1_bodyparts/Urine_3_Frequency.html", false, false);
+        children9.add(childItem);
+        childList.put(headerItem, children9);
+
+        headerItem = new MenuItemModel("Menstruation (Periods), Menopause, and PMS", "file:///android_asset/part1_bodyparts/Menstruation_1.html", true, true);
+        headerList.add(headerItem);
+        List<MenuItemModel> children10 = new ArrayList<>();
+        childItem = new MenuItemModel("Irregular Periods", "file:///android_asset/part1_bodyparts/Menstruation_1.html", false, false);
+        children10.add(childItem);
+        childItem = new MenuItemModel("Missed Periods", "file:///android_asset/part1_bodyparts/Menstruation_2.html", false, false);
+        children10.add(childItem);
+        childItem = new MenuItemModel("Pain and PMS", "file:///android_asset/part1_bodyparts/Menstruation_3.html", false, false);
+        children10.add(childItem);
+        childItem = new MenuItemModel("Bleeding After Menopause", "file:///android_asset/part1_bodyparts/Menstruation_4.html", false, false);
+        children10.add(childItem);
+        childList.put(headerItem, children10);
+
+        headerItem = new MenuItemModel("Groin", "file:///android_asset/part1_bodyparts/Groin.html", true, false);
+        headerList.add(headerItem);
+        childList.put(headerItem, null);
+
+        headerItem = new MenuItemModel("Hips, Buttocks, Legs, and Ankles", "file:///android_asset/part1_bodyparts/HBLA_1.html", true, true);
+        headerList.add(headerItem);
+        List<MenuItemModel> children11 = new ArrayList<>();
+        childItem = new MenuItemModel("Hips, Buttocks and Legs", "file:///android_asset/part1_bodyparts/HBLA_1.html", false, false);
+        children11.add(childItem);
+        childItem = new MenuItemModel("Ankles", "file:///android_asset/part1_bodyparts/HBLA_2.html", false, false);
+        children11.add(childItem);
+        childList.put(headerItem, children11);
+
+        headerItem = new MenuItemModel("Skin", "file:///android_asset/part1_bodyparts/Skin_1_Bites.html", true, true);
+        headerList.add(headerItem);
+        List<MenuItemModel> children12 = new ArrayList<>();
+        childItem = new MenuItemModel("Bites", "file:///android_asset/part1_bodyparts/Skin_1_Bites.html", false, false);
+        children12.add(childItem);
+        childItem = new MenuItemModel("Discolorations", "file:///android_asset/part1_bodyparts/Skin_2_Discolorations.html", false, false);
+        children12.add(childItem);
+        childItem = new MenuItemModel("Freckles, Moles, Bumps, Warts, Lumps, Plaques, and Patches", "file:///android_asset/part1_bodyparts/Skin_3_Freckles, Moles, Bumps, Warts, Lumps, Plaques, and Patches.html", false, false);
+        children12.add(childItem);
+        childItem = new MenuItemModel("Infections", "file:///android_asset/part1_bodyparts/Skin_4_Infections.html", false, false);
+        children12.add(childItem);
+        childItem = new MenuItemModel("Itchy Skin", "file:///android_asset/part1_bodyparts/Skin_5_Itchy Skin.html", false, false);
+        children12.add(childItem);
+        childItem = new MenuItemModel("Rashes", "file:///android_asset/part1_bodyparts/Skin_6_Rashes.html", false, false);
+        children12.add(childItem);
+        childItem = new MenuItemModel("Sores", "file:///android_asset/part1_bodyparts/Skin_7_Sores.html", false, false);
+        children12.add(childItem);
+        childList.put(headerItem, children12);
+
+        headerItem = new MenuItemModel("Back", "file:///android_asset/part1_bodyparts/Back_1_Back Pain.html", true, true);
+        headerList.add(headerItem);
+        List<MenuItemModel> children13 = new ArrayList<>();
+        childItem = new MenuItemModel("Back Pain", "file:///android_asset/part1_bodyparts/Back_1_Back Pain.html", false, false);
+        children13.add(childItem);
+        childList.put(headerItem, children13);
+
+
+        //Part 2 - Yun
 
 
 
-        //part 3 - Pregnancy
+        //Part 3 - Pregnancy
         headerItem = new MenuItemModel("Pregnancy and Postpregnancy", "file:///android_asset/part3_pregnancy/Pregnancy_and_Postpregnancy.html", true, false);
         headerList.add(headerItem);
         childList.put(headerItem, null);
 
 
-        //part 4
+        //Part 4 - Mod
 
 
 
-        //part 5 - Prevention of Error
-        headerItem = new MenuItemModel("Prevention of Errors in the Hospital", "file:///android_asset/part3_pregnancy/Prevention_Error.html", true, false);
+        //Part 5 - Prevention of Error
+        headerItem = new MenuItemModel("Prevention of Errors in the Hospital", "file:///android_asset/part5_prevention/Prevention_Error.html", true, false);
         headerList.add(headerItem);
         childList.put(headerItem, null);
 
 
 
-        //part 5 - Appendices
+        //Part 5 - Appendices
+        headerItem = new MenuItemModel("Appendices", "file:///android_asset/appendices/", true, true);
+        headerList.add(headerItem);
+        List<MenuItemModel> children0 = new ArrayList<>();
+        childItem = new MenuItemModel("Emergency Medical Treatment", "file:///android_asset/appendices/appendixA.html", false, false);
+        children0.add(childItem);
+        childItem = new MenuItemModel("Self-Examinations", "file:///android_asset/appendices/appendixB.html", false, false);
+        children0.add(childItem);
+        childItem = new MenuItemModel("Valuable Preventive Screenings", "file:///android_asset/appendices/appendixC.html", false, false);
+        children0.add(childItem);
+        childItem = new MenuItemModel("Taking a Child's Temperature", "file:///android_asset/appendices/appendixD.html", false, false);
+        children0.add(childItem);
+        childList.put(headerItem, children0);
     }
 
     private void populateExpandableList() {

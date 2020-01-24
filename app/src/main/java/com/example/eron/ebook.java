@@ -61,21 +61,7 @@ public class ebook extends AppCompatActivity {
 
 
         NavigationView navigationView = findViewById(R.id.nav_view);
-
-
-        MarginLayoutParams marginParams = (MarginLayoutParams) navigationView.getLayoutParams();
-
-        int statusBarHeight = 0;
-        int resourceId = getResources().getIdentifier("status_bar_height", "dimen", "android");
-        if (resourceId > 0) {
-            statusBarHeight = getResources().getDimensionPixelSize(resourceId);
-            Log.i("STATUS BAR HEIGHT", Integer.toString(statusBarHeight));
-        }
-
-        marginParams.setMargins(0, statusBarHeight, 0, 0);
-
-
-
+        
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {

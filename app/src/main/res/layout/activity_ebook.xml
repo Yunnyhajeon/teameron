@@ -18,8 +18,8 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:layout_marginEnd="131dp"
-        android:layout_marginRight="131dp"
+        android:layout_marginEnd="130dp"
+        android:layout_marginRight="130dp"
         android:fitsSystemWindows="true">
 
         <ExpandableListView
@@ -27,7 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="20dp"
-            android:background="@android:color/white"
+            android:background="@drawable/toc_bg"
             android:dividerHeight="0dp"
             android:groupIndicator="@null" />
 

@@ -18,8 +18,10 @@ import androidx.core.view.GravityCompat;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.OnApplyWindowInsetsListener;
 
 import android.view.Menu;
+import android.view.ViewGroup.MarginLayoutParams;
 
 import android.webkit.WebView;
 
@@ -59,6 +61,7 @@ public class ebook extends AppCompatActivity {
 
 
         NavigationView navigationView = findViewById(R.id.nav_view);
+        
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {

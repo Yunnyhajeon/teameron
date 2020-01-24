@@ -5,6 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
+import android.text.method.ScrollingMovementMethod;
+
+import org.w3c.dom.Text;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -16,6 +20,8 @@ public class disclaimer_fragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.disclaimer_frag, container, false);
+        TextView disclaimerText = (TextView) view.findViewById(R.id.disclaimer_textview);
+        disclaimerText.setMovementMethod(new ScrollingMovementMethod());
         home_btn = view.findViewById(R.id.home_btn_from_disclaimer);
         home_btn.setOnClickListener(new View.OnClickListener() {
             @Override

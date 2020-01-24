@@ -92,7 +92,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
         }
 
         TextView lblListHeader = convertView.findViewById(R.id.menu_item_header);
-        lblListHeader.setTypeface(null, Typeface.BOLD);
+        //lblListHeader.setTypeface(null, Typeface.BOLD);
         lblListHeader.setText(headerTitle);
 
         return convertView;

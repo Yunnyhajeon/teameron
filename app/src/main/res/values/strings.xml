@@ -15,4 +15,18 @@
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
 
+    <string name="more_info_text">This app is an adaptation of Dr. Neil Shulman’s book, Your Body’s Red Light Warning Signals, which was contributed to by over 150 doctors and nurses. It was originally published in 1999 by Bantam Books, with the revised edition published in 2009 by Delta Trade Paperback.\n\n
+    This app is the product of Team ERoN, a team of 6 Georgia Institute of Technology Computer Science majors, for their Junior Design project. This team worked directly with the author, Dr. Shulman, to bring you this free app.\n\n
+    To both Dr. Shulman and Team ERoN, the ultimate goal of this project was and remains patient empowerment. We aim to empower you to make the tough choice: Should I go to the Emergency Room, or do I stay home? We understand the stakes of both outcomes: the potential medical harm in erroneously staying home and the potential financial harm in going to the ER unnecessarily.\n\n
+    At this time, the Symptom Finder feature of this app only applies to the pediatric section of the book.\n
+    At this time, this app is only available in the English version of the book.\n
+    This app was released, as-is, to Dr. Neil Shulman by the students of Team ERoN under the, MIT License, Copyright (c) 2020 Adira Amidon, Muddassir Bahri, Semin Choi, Yun Ha Jeon, Haley Littmann, and Xiangling Tham.</string>
+
+    <string name="disclaimer_text">The information within this app does <b>NOT</b> constitute a diagnosis. If you are in doubt, <b>please see a medical professional immediately</b>.\n\n
+    To quote the book’s edition notice directly: “this book is not intended as a substitute for medical advice of physicians. The reader should regularly consult a physician about matters relating to [their] health and particularly regarding any symptoms that may require diagnosis or medical attention.”\n\n
+        Neither the developers of this app nor the client/author, Dr. Shulman, are responsible for any decisions the user makes after consulting this app. Such individuals are similarly not responsible for any consequences, positive or negative, of such decisions.\n\n
+        Please also note that medical information is constantly changing/updating, and this book is not exhaustive. It is possible that the user is experiencing serious symptoms that require medical attention that are not listed in this book. Again, <b>we urge you to seek immediate medical attention in the case of urgent symptoms</b>, even and especially regarding symptoms not explained in this app.\n\n
+        The source material, Your Body’s Red Light Warning Signals, is a compilation of what over 150 doctors and nurses considered the most pressing, often passed-over medical issues. This app seeks to highlight and provide insight into those issues, but does not constitute medical advice.
+</string>
+
 </resources>

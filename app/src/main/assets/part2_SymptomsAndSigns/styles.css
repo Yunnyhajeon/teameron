@@ -1,6 +1,10 @@
 
-.section_title, .subheading {
+.section_title, .subheading, .images {
     text-align:center;
+}
+.images img{
+    width: 100%;
+
 }
 .tip_number{
     font-weight:bold;

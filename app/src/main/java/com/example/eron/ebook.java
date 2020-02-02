@@ -25,6 +25,7 @@ import android.view.ViewGroup.MarginLayoutParams;
 
 import android.webkit.WebView;
 
+import android.widget.Button;
 import android.widget.ExpandableListView;
 import android.util.Log;
 
@@ -41,6 +42,9 @@ public class ebook extends AppCompatActivity {
     List<MenuItemModel> headerList = new ArrayList<>();
     HashMap<MenuItemModel, List<MenuItemModel>> childList = new HashMap<>();
 
+    Button prevBtn, nextBtn;
+    MenuItemModel prevSection, nextSection;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,9 +53,30 @@ public class ebook extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Red Light Warning Signals");
 
+        prevBtn = findViewById(R.id.prevSection);
+        prevBtn.setEnabled(false);
+        nextBtn = findViewById(R.id.nextSection);
+        nextBtn.setEnabled(false);
+
+        prevBtn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                WebView webView = (WebView) findViewById(R.id.menu_content_webview);
+                webView.loadUrl(prevSection.htmlUrl);
+            }
+        });
+
+        nextBtn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                WebView webView = (WebView) findViewById(R.id.menu_content_webview);
+                webView.loadUrl(nextSection.htmlUrl);
+            }
+        });
+
+
         expandableListView = findViewById(R.id.expandable_list_view);
         prepareMenuData();
         populateExpandableList();
+
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -446,6 +471,8 @@ public class ebook extends AppCompatActivity {
                         drawer.closeDrawer(GravityCompat.START, false);
                         WebView webView = (WebView) findViewById(R.id.menu_content_webview);
 
+                        //setDirectionButtonsForGroup(groupPosition);
+
                         if (webView == null) {
                             Log.i("WebViewNullCheck", "WebView is NULL!!!");
                         } else {
@@ -473,6 +500,8 @@ public class ebook extends AppCompatActivity {
                         drawer.closeDrawer(GravityCompat.START, false);
                         WebView webView = (WebView) findViewById(R.id.menu_content_webview);
 
+                        //setDirectionButtonsForChild(groupPosition, childPosition);
+
                         if (webView == null) {
                             Log.i("WebViewNullCheck", "WebView is NULL!!!");
                         } else {
@@ -487,5 +516,84 @@ public class ebook extends AppCompatActivity {
                 return false;
             }
         });
+    }
+
+    public void setDirectionButtonsForGroup(int groupPosition) {
+        //for childrenless groups
+
+        if (groupPosition == 0) {
+            prevBtn.setEnabled(false);
+        } else if (groupPosition == headerList.size() - 1) {
+            nextBtn.setEnabled(false);
+        } else {
+            prevBtn.setEnabled(true);
+            nextBtn.setEnabled(true);
+        }
+
+        if (prevBtn.isEnabled()) {
+            MenuItemModel prevGroup = headerList.get(groupPosition-1);
+
+            if (!prevGroup.hasChildren) {
+                prevSection = prevGroup;
+            } else {
+                int numChildren = childList.get(groupPosition-1).size();
+                prevSection = childList.get(groupPosition-1).get(numChildren-1);
+            }
+        }
+
+        if (nextBtn.isEnabled()) {
+            MenuItemModel nextGroup = headerList.get(groupPosition+1);
+
+            if (!nextGroup.hasChildren) {
+                nextSection = nextGroup;
+            } else {
+                nextSection = childList.get(groupPosition+1).get(0);
+            }
+        }
+    }
+
+    public void setDirectionButtonsForChild(int groupPosition, int childPosition) {
+
+        int numChildren = childList.get(groupPosition).size();
+
+        if (groupPosition == 0 && childPosition == 0) {
+            prevBtn.setEnabled(false);
+        } else if (groupPosition == headerList.size() - 1 && childPosition == numChildren - 1) {
+            nextBtn.setEnabled(false);
+        } else {
+            prevBtn.setEnabled(true);
+            nextBtn.setEnabled(true);
+        }
+
+        if (prevBtn.isEnabled()) {
+            MenuItemModel prevChild;
+
+            if (childPosition == 0) {
+                MenuItemModel prevGroup = headerList.get(groupPosition - 1);
+                if (!prevGroup.hasChildren) {
+                    prevSection = prevGroup;
+                } else {
+                    int numPrevChildren = childList.get(groupPosition - 1).size();
+                    prevSection = childList.get(groupPosition - 1).get(numPrevChildren - 1);
+                }
+            } else {
+                prevSection = childList.get(groupPosition).get(childPosition-1);
+            }
+        }
+
+        if (nextBtn.isEnabled()) {
+            MenuItemModel nextChild;
+
+            if (childPosition == numChildren-1) {
+                MenuItemModel nextGroup = headerList.get(groupPosition+1);
+                if (!nextGroup.hasChildren) {
+                    nextSection = nextGroup;
+                } else {
+                    nextSection = childList.get(groupPosition+1).get(0);
+                }
+            } else {
+                nextSection = childList.get(groupPosition).get(childPosition+1);
+            }
+        }
     }
 }

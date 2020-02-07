@@ -385,7 +385,7 @@ public class ebook extends AppCompatActivity {
         List<MenuItemModel> children15 = new ArrayList<>();
         childItem = new MenuItemModel("Headache", "file:///android_asset/part4_pediatrics/Head_1_Pediatric_Headache.html", true, false);
         children15.add(childItem);
-        childItem = new MenuItemModel("Psychological Problems", "file:///android_asset/part4_pediatrics/Pediatric_Psychological_Problems.html", true, false);
+        childItem = new MenuItemModel("Psychological Problems", "file:///android_asset/part4_pediatrics/Pediatric_PsychologicalProblems.html", true, false);
         children15.add(childItem);
         childItem = new MenuItemModel("Eyes", "file:///android_asset/part4_pediatrics/Pediatric_Eyes.html", true, false);
         children15.add(childItem);

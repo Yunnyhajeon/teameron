@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 public class emergency_guide_fragment extends Fragment {
-    Button home_btn, CPR_btn, choking_btn, bleeding_btn;
+    Button home_btn, CPR_btn, choking_btn;
 
     @Nullable
     @Override

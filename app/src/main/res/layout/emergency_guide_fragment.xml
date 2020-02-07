@@ -1,69 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFEB3B">
-
-    <Button
-        android:id="@+id/bleeding_btn"
-        android:layout_width="151dp"
-        android:layout_height="107dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="161dp"
-        android:layout_marginLeft="161dp"
-        android:layout_marginTop="405dp"
-        android:text="How to Stop Bleeding" />
+    android:background="#2699FB">
 
     <Button
         android:id="@+id/choking_btn"
-        android:layout_width="151dp"
-        android:layout_height="107dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="36dp"
-        android:layout_marginLeft="36dp"
-        android:layout_marginTop="262dp"
-        android:layout_toEndOf="@+id/CPR_btn"
-        android:layout_toRightOf="@+id/CPR_btn"
-        android:text="How to Prevent Choking" />
-
-    <TextView
-        android:id="@+id/textview3"
-        android:layout_width="339dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
+        android:layout_width="150dp"
+        android:layout_height="117dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="33dp"
-        android:layout_marginLeft="33dp"
-        android:layout_marginTop="92dp"
-        android:layout_marginEnd="39dp"
-        android:layout_marginRight="39dp"
-        android:layout_marginBottom="591dp"
-        android:gravity="center"
-        android:text="Emergency Guide Pages"
-        android:textSize="30sp" />
+        android:layout_marginTop="318dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
+        android:text="How to Prevent Choking" />
 
     <Button
         android:id="@+id/home_btn_from_emergency"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:text="Back " />
 
     <Button
         android:id="@+id/CPR_btn"
-        android:layout_width="151dp"
-        android:layout_height="107dp"
+        android:layout_width="150dp"
+        android:layout_height="117dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginTop="264dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="318dp"
         android:text="How to Preform CPR" />
+
+    <TextView
+        android:id="@+id/emerg_title"
+        android:layout_width="301dp"
+        android:layout_height="94dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="false"
+        android:layout_marginStart="55dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="99dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginRight="55dp"
+        android:text="Emergency Guide Pages"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 </RelativeLayout>

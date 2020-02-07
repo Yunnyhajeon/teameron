@@ -9,14 +9,15 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 public class medical_guide_fragment extends Fragment {
-    Button home_btn, bld_pressure_btn, child_temp_btn, breast_exam_btn, medication_btn  ;
+    Button home_btn, screenings_btn, child_temp_btn, breast_exam_btn, test_btn;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.medical_guide_fragment, container, false);
-        home_btn = view.findViewById(R.id.home_btn_from_medicalguide);
+        home_btn = view.findViewById(R.id.home_btn_from_medical);
         home_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -25,10 +26,71 @@ public class medical_guide_fragment extends Fragment {
             }
         });
 
-        bld_pressure_btn = view.findViewById(R.id.bld_pressure_btn);
+
+
         child_temp_btn = view.findViewById(R.id.child_temp_btn);
-        breast_exam_btn = view.findViewById(R.id.breast_exam_btn);
-        medication_btn = view.findViewById(R.id.medication_btn);
+        child_temp_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fr=new GuideContentFragment();
+                FragmentManager fm=getFragmentManager();
+                androidx.fragment.app.FragmentTransaction ft=fm.beginTransaction();
+                Bundle args = new Bundle();
+                args.putString("url", "file:///android_asset/MedicalGuides/ChildsTemperature.html");
+                args.putString("guideType", "Medical");
+                fr.setArguments(args);
+                ft.replace(R.id.fragment_container, fr);
+                ft.commit();
+            }
+        });
+
+        breast_exam_btn = view.findViewById(R.id.breast_test_btn);
+        breast_exam_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fr=new GuideContentFragment();
+                FragmentManager fm=getFragmentManager();
+                androidx.fragment.app.FragmentTransaction ft=fm.beginTransaction();
+                Bundle args = new Bundle();
+                args.putString("url", "file:///android_asset/MedicalGuides/BreastExam.html");
+                args.putString("guideType", "Medical");
+                fr.setArguments(args);
+                ft.replace(R.id.fragment_container, fr);
+                ft.commit();
+            }
+        });
+
+        screenings_btn = view.findViewById(R.id.screenings_btn);
+        screenings_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fr=new GuideContentFragment();
+                FragmentManager fm=getFragmentManager();
+                androidx.fragment.app.FragmentTransaction ft=fm.beginTransaction();
+                Bundle args = new Bundle();
+                args.putString("url", "file:///android_asset/MedicalGuides/RecommendedScreenings.html");
+                args.putString("guideType", "Medical");
+                fr.setArguments(args);
+                ft.replace(R.id.fragment_container, fr);
+                ft.commit();
+            }
+        });
+
+        test_btn = view.findViewById(R.id.test_btn);
+        test_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fr=new GuideContentFragment();
+                FragmentManager fm=getFragmentManager();
+                androidx.fragment.app.FragmentTransaction ft=fm.beginTransaction();
+                Bundle args = new Bundle();
+                args.putString("url", "file:///android_asset/MedicalGuides/TesticularExam.html");
+                args.putString("guideType", "Medical");
+                fr.setArguments(args);
+                ft.replace(R.id.fragment_container, fr);
+                ft.commit();
+            }
+        });
         return view;
 
     }

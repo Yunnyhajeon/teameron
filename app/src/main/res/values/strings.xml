@@ -27,6 +27,9 @@
         Neither the developers of this app nor the client/author, Dr. Shulman, are responsible for any decisions the user makes after consulting this app. Such individuals are similarly not responsible for any consequences, positive or negative, of such decisions.\n\n
         Please also note that medical information is constantly changing/updating, and this book is not exhaustive. It is possible that the user is experiencing serious symptoms that require medical attention that are not listed in this book. Again, <b>we urge you to seek immediate medical attention in the case of urgent symptoms</b>, even and especially regarding symptoms not explained in this app.\n\n
         The source material, Your Body’s Red Light Warning Signals, is a compilation of what over 150 doctors and nurses considered the most pressing, often passed-over medical issues. This app seeks to highlight and provide insight into those issues, but does not constitute medical advice.
-</string>
+    </string>
+
+    <string name="disclaimer_title"><u>DISCLAIMER</u></string>
+    <string name="moreinfo_title"><u>MORE INFO</u></string>
 
 </resources>

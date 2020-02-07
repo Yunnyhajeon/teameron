@@ -25,6 +25,7 @@ import android.view.ViewGroup.MarginLayoutParams;
 
 import android.webkit.WebView;
 
+import android.widget.Button;
 import android.widget.ExpandableListView;
 import android.util.Log;
 
@@ -41,6 +42,10 @@ public class ebook extends AppCompatActivity {
     List<MenuItemModel> headerList = new ArrayList<>();
     HashMap<MenuItemModel, List<MenuItemModel>> childList = new HashMap<>();
 
+    Button prevBtn, nextBtn;
+    MenuItemModel prevSection, nextSection;
+    int currentSection;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,9 +54,11 @@ public class ebook extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Red Light Warning Signals");
 
+
         expandableListView = findViewById(R.id.expandable_list_view);
         prepareMenuData();
         populateExpandableList();
+
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -179,7 +186,7 @@ public class ebook extends AppCompatActivity {
         children1.add(childItem);
         childItem = new MenuItemModel("Head Injury", "file:///android_asset/part1_bodyparts/Head_2_HeadInjury.html", false, false);
         children1.add(childItem);
-        childItem = new MenuItemModel("Psychological Problems", "file:///android_asset/part1_bodyparts/Head_1_PsychologicalProblems.html", false, false);
+        childItem = new MenuItemModel("Psychological Problems", "file:///android_asset/part1_bodyparts/Head_3_PsychologicalProblems.html", false, false);
         children1.add(childItem);
         childList.put(headerItem, children1);
 

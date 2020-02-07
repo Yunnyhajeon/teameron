@@ -33,4 +33,84 @@
 
     <!--<include layout="@layout/content_ebook" /> -->
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="3dp"
+                android:text="YOUR BODY'S"
+                android:textSize="30dp"
+                app:fontFamily="@font/raleway_light" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="3dp"
+                android:text="RED LIGHT"
+                android:textSize="30dp"
+                android:textColor="#cc1100"
+                app:fontFamily="@font/raleway_medium" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="3dp"
+                android:text="WARNING"
+                android:textSize="30dp"
+                app:fontFamily="@font/raleway_light" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="3dp"
+                android:text="SIGNAL"
+                android:textSize="30dp"
+                app:fontFamily="@font/raleway_light" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_gravity="center"
+                android:layout_width="40dp"
+                android:layout_height="120dp"
+                app:srcCompat="@drawable/redlight_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="3dp"
+                android:text="Neil Shulman, M.D."
+                android:textSize="18dp"
+                app:fontFamily="@font/raleway_light" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="3dp"
+                android:text="Jack Birge, M.D."
+                android:textSize="18dp"
+                app:fontFamily="@font/raleway_light" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="3dp"
+                android:text="Joon Ahn, M.D."
+                android:textSize="18dp"
+                app:fontFamily="@font/raleway_light" />
+        </LinearLayout>
+
+    </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

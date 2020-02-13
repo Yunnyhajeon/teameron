@@ -38,6 +38,7 @@ public class medical_guide_fragment extends Fragment {
                 Bundle args = new Bundle();
                 args.putString("url", "file:///android_asset/MedicalGuides/ChildsTemperature.html");
                 args.putString("guideType", "Medical");
+                args.putString("title", "Taking a Child's Temperature");
                 fr.setArguments(args);
                 ft.replace(R.id.fragment_container, fr);
                 ft.commit();
@@ -54,6 +55,7 @@ public class medical_guide_fragment extends Fragment {
                 Bundle args = new Bundle();
                 args.putString("url", "file:///android_asset/MedicalGuides/BreastExam.html");
                 args.putString("guideType", "Medical");
+                args.putString("title", "Self Breast Examination");
                 fr.setArguments(args);
                 ft.replace(R.id.fragment_container, fr);
                 ft.commit();
@@ -70,6 +72,7 @@ public class medical_guide_fragment extends Fragment {
                 Bundle args = new Bundle();
                 args.putString("url", "file:///android_asset/MedicalGuides/RecommendedScreenings.html");
                 args.putString("guideType", "Medical");
+                args.putString("title", "List of Recommended Screenings");
                 fr.setArguments(args);
                 ft.replace(R.id.fragment_container, fr);
                 ft.commit();
@@ -86,6 +89,7 @@ public class medical_guide_fragment extends Fragment {
                 Bundle args = new Bundle();
                 args.putString("url", "file:///android_asset/MedicalGuides/TesticularExam.html");
                 args.putString("guideType", "Medical");
+                args.putString("title", "Self Testicular Examination");
                 fr.setArguments(args);
                 ft.replace(R.id.fragment_container, fr);
                 ft.commit();

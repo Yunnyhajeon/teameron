@@ -28,6 +28,7 @@ import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ExpandableListView;
 import android.util.Log;
+import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -458,6 +459,11 @@ public class ebook extends AppCompatActivity {
                         } else {
                             Log.i("URL", headerList.get(groupPosition).htmlUrl);
                             webView.loadUrl(headerList.get(groupPosition).htmlUrl);
+                            LinearLayout myLayout = (LinearLayout) findViewById(R.id.cover);
+                            for ( int i = 0; i < myLayout.getChildCount();  i++ ){
+                                View view = myLayout.getChildAt(i);
+                                view.setVisibility(View.GONE);
+                            }
                             //onBackPressed();
                         }
                     }
@@ -485,6 +491,12 @@ public class ebook extends AppCompatActivity {
                         } else {
                             Log.i("URL", headerList.get(groupPosition).htmlUrl);
                             webView.loadUrl(model.htmlUrl);
+
+                            LinearLayout myLayout = (LinearLayout) findViewById(R.id.cover);
+                            for ( int i = 0; i < myLayout.getChildCount();  i++ ){
+                                View view = myLayout.getChildAt(i);
+                                view.setVisibility(View.GONE);
+                            }
                             //onBackPressed();
                         }
 

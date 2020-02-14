@@ -1,58 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2699FB">
+    android:background="#F5F5F5">
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/choking_btn"
+        android:layout_marginTop="-854dp"
+        android:tint="#862222"
+        android:visibility="visible"
+        app:srcCompat="@drawable/blurred_emerg"
+        app:tintMode="add" />
 
     <Button
         android:id="@+id/choking_btn"
         android:layout_width="150dp"
         android:layout_height="117dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="318dp"
-        android:layout_marginEnd="35dp"
-        android:layout_marginRight="35dp"
+        android:layout_marginStart="139dp"
+        android:layout_marginLeft="139dp"
+        android:layout_marginTop="325dp"
+        android:layout_marginEnd="138dp"
+        android:layout_marginRight="138dp"
+        android:background="@drawable/buttonbordershadow"
+        android:fontFamily="@font/raleway_regular"
         android:text="How to Prevent Choking" />
 
     <Button
         android:id="@+id/home_btn_from_emergency"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Back " />
+        android:layout_width="37dp"
+        android:layout_height="35dp"
+        android:background="@drawable/ic_arrow_back_24px"
+        android:shadowColor="#F7FFFFFF" />
 
     <Button
         android:id="@+id/CPR_btn"
         android:layout_width="150dp"
         android:layout_height="117dp"
+        android:layout_below="@+id/choking_btn"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="35dp"
-        android:layout_marginLeft="35dp"
-        android:layout_marginTop="318dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="139dp"
+        android:layout_marginLeft="139dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="138dp"
+        android:layout_marginRight="138dp"
+        android:background="@drawable/buttonbordershadow"
+        android:fontFamily="@font/raleway_regular"
         android:text="How to Preform CPR" />
 
     <TextView
         android:id="@+id/emerg_title"
-        android:layout_width="301dp"
-        android:layout_height="94dp"
+        android:layout_width="319dp"
+        android:layout_height="113dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_centerInParent="true"
-        android:layout_centerVertical="false"
-        android:layout_marginStart="55dp"
-        android:layout_marginLeft="55dp"
-        android:layout_marginTop="99dp"
-        android:layout_marginEnd="55dp"
-        android:layout_marginRight="55dp"
-        android:text="Emergency Guide Pages"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:layout_centerVertical="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="101dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginRight="47dp"
+        android:text="Emergency Guide"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        android:textStyle="normal"
+        app:fontFamily="@font/raleway_regular" />
+
 </RelativeLayout>

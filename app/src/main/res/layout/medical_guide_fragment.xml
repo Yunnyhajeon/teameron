@@ -2,83 +2,153 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#2699FB">
+    android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/screenings_btn"
-        android:layout_width="150dp"
-        android:layout_height="117dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="452dp"
-        android:layout_marginEnd="35dp"
-        android:layout_marginRight="35dp"
-        android:text="Recommended Screenings" />
+    <RelativeLayout
 
-    <Button
-        android:id="@+id/child_temp_btn"
-        android:layout_width="150dp"
-        android:layout_height="117dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="35dp"
-        android:layout_marginLeft="35dp"
-        android:layout_marginTop="452dp"
-        android:text="How to Take a Child's Temperature" />
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:alpha="0.8"
+        android:background="@drawable/medicalguidebackground"
+        android:backgroundTint="#8035B6DA"
+        android:backgroundTintMode="src_over"
+        android:layout_weight="1"
+        >
 
-    <Button
-        android:id="@+id/test_btn"
-        android:layout_width="150dp"
-        android:layout_height="117dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="275dp"
-        android:layout_marginEnd="35dp"
-        android:layout_marginRight="35dp"
-        android:text="Self Testicular Exam" />
+        <Button
+            android:id="@+id/home_btn_from_medical"
+            android:layout_height="48dp"
+            android:layout_width="48dp"
+            android:background="@drawable/ic_arrow"
+            android:drawableTint="#fff"
+            />
 
-    <TextView
-        android:id="@+id/med_title"
-        android:layout_width="301dp"
-        android:layout_height="94dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_centerInParent="true"
-        android:layout_centerVertical="false"
-        android:layout_marginStart="55dp"
-        android:layout_marginLeft="55dp"
-        android:layout_marginTop="99dp"
-        android:layout_marginEnd="55dp"
-        android:layout_marginRight="55dp"
-        android:text="Medical Guide Pages"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        <Button
+            android:id="@+id/house_btn"
+            android:layout_height="48dp"
+            android:layout_width="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="55dp"
+            android:background="@drawable/ic_home_black_24dp"
+            android:drawableTint="#fff"
+            />
 
-    <Button
-        android:id="@+id/home_btn_from_medical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Back "
-        android:textColor="#000000" />
+        <Button
+            android:id="@+id/settings_btn"
+            android:layout_height="48dp"
+            android:layout_width="48dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_settings_black_24dp"
+            android:drawableTint="#fff"
+            />
 
-    <Button
-        android:id="@+id/breast_test_btn"
-        android:layout_width="150dp"
-        android:layout_height="117dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="35dp"
-        android:layout_marginLeft="35dp"
-        android:layout_marginTop="275dp"
-        android:text="Self Breast Examination" />
 
+
+        <TextView
+            android:id="@+id/med_title"
+            android:layout_width="301dp"
+            android:layout_height="94dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="false"
+            android:layout_marginStart="55dp"
+            android:layout_marginLeft="55dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="55dp"
+            android:layout_marginRight="55dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Medical Guide"
+            android:fontFamily="@font/raleway_medium"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp"
+        />
+
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="410dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        >
+
+
+        <Button
+            android:id="@+id/screenings_btn"
+            android:layout_width="150dp"
+            android:layout_height="117dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="275dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="35dp"
+            android:background="@drawable/rounded_button"
+            android:fontFamily="@font/raleway_medium"
+            android:text="Recommended Screenings"
+
+            />
+
+        <Button
+            android:id="@+id/child_temp_btn"
+            android:layout_width="150dp"
+            android:layout_height="117dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="35dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="275dp"
+            android:background="@drawable/rounded_button"
+            android:text="How to Take a Child's Temperature"
+            android:fontFamily="@font/raleway_medium"/>
+
+        <Button
+            android:id="@+id/test_btn"
+            android:layout_width="150dp"
+            android:layout_height="117dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="35dp"
+            android:background="@drawable/rounded_button"
+            android:text="Self Testicular Examination"
+            android:fontFamily="@font/raleway_medium"/>
+
+
+        <Button
+            android:id="@+id/breast_test_btn"
+            android:layout_width="150dp"
+            android:layout_height="117dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="35dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded_button"
+            android:text="Self Breast Examination"
+            android:fontFamily="@font/raleway_medium"/>
+
+        <Button
+            android:id="@+id/belly_btn"
+            android:layout_width="150dp"
+            android:layout_height="117dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="145dp"
+            android:layout_marginEnd="135dp"
+            android:layout_marginRight="100dp"
+            android:background="@drawable/rounded_button"
+            android:text="Assessing Belly Pain"
+            android:fontFamily="@font/raleway_medium"/>
+    </RelativeLayout>
 </RelativeLayout>

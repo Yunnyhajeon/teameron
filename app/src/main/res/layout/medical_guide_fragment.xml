@@ -10,8 +10,6 @@
         android:layout_height="250dp"
         android:alpha="0.8"
         android:background="@drawable/medicalguidebackground"
-        android:backgroundTint="#8035B6DA"
-        android:backgroundTintMode="src_over"
         android:layout_weight="1"
         >
 

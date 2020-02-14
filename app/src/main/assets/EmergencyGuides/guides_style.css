@@ -3,6 +3,11 @@
     src: url("file:///android_asset/fonts/raleway_medium.ttf");
 }
 
+.images img{
+    width: 100%;
+
+}
+
 body {
     font-family: "RalewayMedium";
     text-align: left;

@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 public class medical_guide_fragment extends Fragment {
-    Button home_btn, screenings_btn, child_temp_btn, breast_exam_btn, test_btn;
+    Button home_btn, screenings_btn, child_temp_btn, breast_exam_btn, test_btn, belly_btn;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -95,6 +95,24 @@ public class medical_guide_fragment extends Fragment {
                 ft.commit();
             }
         });
+
+        belly_btn = view.findViewById(R.id.belly_btn);
+        belly_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fr=new GuideContentFragment();
+                FragmentManager fm=getFragmentManager();
+                androidx.fragment.app.FragmentTransaction ft=fm.beginTransaction();
+                Bundle args = new Bundle();
+                args.putString("url", "file:///android_asset/MedicalGuides/HowToAssessBellyPain.html");
+                args.putString("guideType", "Medical");
+                args.putString("title", "How to Assess Belly Pain");
+                fr.setArguments(args);
+                ft.replace(R.id.fragment_container, fr);
+                ft.commit();
+            }
+        });
+
         return view;
 
     }

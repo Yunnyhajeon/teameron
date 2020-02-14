@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:alpha="0.8"
     android:background="#F5F5F5">
 
     <ImageView
@@ -12,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/choking_btn"
         android:layout_marginTop="-854dp"
-        android:tint="#862222"
+        android:tint="#5A0000"
         android:visibility="visible"
         app:srcCompat="@drawable/blurred_emerg"
         app:tintMode="add" />
@@ -32,7 +33,7 @@
         android:layout_marginEnd="138dp"
         android:layout_marginRight="138dp"
         android:background="@drawable/buttonbordershadow"
-        android:fontFamily="@font/raleway_regular"
+        android:fontFamily="@font/raleway_medium"
         android:text="How to Prevent Choking" />
 
     <Button
@@ -57,28 +58,28 @@
         android:layout_marginEnd="138dp"
         android:layout_marginRight="138dp"
         android:background="@drawable/buttonbordershadow"
-        android:fontFamily="@font/raleway_regular"
+        android:fontFamily="@font/raleway_medium"
         android:text="How to Preform CPR" />
 
     <TextView
         android:id="@+id/emerg_title"
-        android:layout_width="319dp"
-        android:layout_height="113dp"
+        android:layout_width="369dp"
+        android:layout_height="137dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:layout_marginStart="60dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="101dp"
-        android:layout_marginEnd="47dp"
-        android:layout_marginRight="47dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="82dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginRight="19dp"
         android:text="Emergency Guide"
-        android:textColor="#000000"
-        android:textSize="36sp"
-        android:textStyle="normal"
-        app:fontFamily="@font/raleway_regular" />
+        android:textColor="#FFFF"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:fontFamily="@font/raleway_medium" />
 
 </RelativeLayout>

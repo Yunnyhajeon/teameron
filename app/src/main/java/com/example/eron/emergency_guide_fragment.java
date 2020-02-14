@@ -39,6 +39,7 @@ public class emergency_guide_fragment extends Fragment {
                 Bundle args = new Bundle();
                 args.putString("url", "file:///android_asset/EmergencyGuides/CPR.html");
                 args.putString("guideType", "Emergency");
+                args.putString("title", "How to Perform CPR");
                 fr.setArguments(args);
                 ft.replace(R.id.fragment_container, fr);
                 ft.commit();
@@ -55,6 +56,8 @@ public class emergency_guide_fragment extends Fragment {
                 Bundle args = new Bundle();
                 args.putString("url", "file:///android_asset/EmergencyGuides/Choking.html");
                 args.putString("guideType", "Emergency");
+                args.putString("title", "How to Stop Choking");
+
                 fr.setArguments(args);
                 ft.replace(R.id.fragment_container, fr);
                 ft.commit();

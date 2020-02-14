@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "RalewayMedium";
+    src: url("file:///android_asset/fonts/raleway_medium.ttf");
+}
+
+body {
+    font-family: "RalewayMedium";
+    text-align: left;
+    font-size: 17px;
+    margin-left: 23px;
+    margin-right: 23px;
+}
+
+h1 {
+    color: #4665E0;
+}

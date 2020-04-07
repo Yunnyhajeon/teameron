@@ -16,8 +16,7 @@ public class CheckedActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_checked);
-
-        Category = findViewById(R.id.parent);
+        
         Symptom = findViewById(R.id.child);
         List<String> symptomList = new ArrayList<String>();
 
@@ -29,7 +28,7 @@ public class CheckedActivity extends AppCompatActivity {
 
                 if (isChildChecked.equalsIgnoreCase(ConstantManager.CHECK_BOX_CHECKED_TRUE))
                 {
-                    Symptom.setText(Symptom.getText() + " , " + MyCategoriesExpandableListAdapter.childItems.get(i).get(j).get(ConstantManager.Parameter.SUB_CATEGORY_NAME));
+                    Symptom.setText(Symptom.getText() + " " + MyCategoriesExpandableListAdapter.childItems.get(i).get(j).get(ConstantManager.Parameter.SUB_CATEGORY_NAME) + ", ");
                     symptomList.add(MyCategoriesExpandableListAdapter.childItems.get(i).get(j).get(ConstantManager.Parameter.SUB_CATEGORY_NAME));
                 }
 

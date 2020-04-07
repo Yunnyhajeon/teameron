@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SF_activity">
+
+    <TextView
+        android:id="@+id/instructions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text='Select a category to see relevant symptoms. Select the bold, black circles to indicate which symptoms are present. To select all the symptoms underneath a category, select the circle next to the category name. (Ie. Click the bold circle next to "Head/Neck". When you are finished, click done.' />
+
+    <ExpandableListView
+        android:id="@+id/lvCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="532dp"
+        android:childDivider="@color/colorBlack"
+        android:divider="@null"
+        android:dividerHeight="0dp">
+
+    </ExpandableListView>
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Done" />
+
+</LinearLayout>

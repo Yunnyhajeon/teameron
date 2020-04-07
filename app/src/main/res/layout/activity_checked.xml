@@ -10,10 +10,11 @@
     tools:context=".CheckedActivity">
 
     <TextView
+        android:id="@+id/Category"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:text="Selected Parents : "/>
+        android:text="Selected Parents : "
+        android:textSize="20sp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -23,10 +24,11 @@
         android:id="@+id/parent"/>
 
     <TextView
+        android:id="@+id/Symptom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:text="Selected Children : "/>
+        android:text="Selected Children : "
+        android:textSize="20sp" />
 
     <TextView
         android:layout_width="wrap_content"

@@ -2,28 +2,26 @@ package com.example.eron;
 
 import android.os.Bundle;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class CheckedActivity extends AppCompatActivity {
 
-    private TextView tvParent, tvChild;
+    private TextView Category, Symptom;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_checked);
 
-        tvParent = findViewById(R.id.parent);
-        tvChild = findViewById(R.id.child);
+        Category = findViewById(R.id.parent);
+        Symptom = findViewById(R.id.child);
+        List<String> symptomList = new ArrayList<String>();
 
         for (int i = 0; i < MyCategoriesExpandableListAdapter.parentItems.size(); i++ ){
-
-            String isChecked = MyCategoriesExpandableListAdapter.parentItems.get(i).get(ConstantManager.Parameter.IS_CHECKED);
-
-            if (isChecked.equalsIgnoreCase(ConstantManager.CHECK_BOX_CHECKED_TRUE))
-            {
-                tvParent.setText(tvParent.getText() + MyCategoriesExpandableListAdapter.parentItems.get(i).get(ConstantManager.Parameter.CATEGORY_NAME));
-            }
 
             for (int j = 0; j < MyCategoriesExpandableListAdapter.childItems.get(i).size(); j++ ){
 
@@ -31,8 +29,8 @@ public class CheckedActivity extends AppCompatActivity {
 
                 if (isChildChecked.equalsIgnoreCase(ConstantManager.CHECK_BOX_CHECKED_TRUE))
                 {
-                    tvChild.setText(tvChild.getText() + " , " + MyCategoriesExpandableListAdapter.childItems.get(i).get(j).get(ConstantManager.Parameter.SUB_CATEGORY_NAME));
-                    // tvChild.setText(tvChild.getText() +" , " + MyCategoriesExpandableListAdapter.parentItems.get(i).get(ConstantManager.Parameter.CATEGORY_NAME) + " "+(j+1));
+                    Symptom.setText(Symptom.getText() + " , " + MyCategoriesExpandableListAdapter.childItems.get(i).get(j).get(ConstantManager.Parameter.SUB_CATEGORY_NAME));
+                    symptomList.add(MyCategoriesExpandableListAdapter.childItems.get(i).get(j).get(ConstantManager.Parameter.SUB_CATEGORY_NAME));
                 }
 
             }

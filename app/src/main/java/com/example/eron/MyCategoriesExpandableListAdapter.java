@@ -13,7 +13,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
- * Created using tutorial -
+ * The following classes were from this tutorial: https://demonuts.com/android-expandablelistview-checkbox/
+ * MyCategoriesExpandableListAdapter.java, SF_activity.java, CheckedActivity.java, DataItem.java,
+ * SubCategoryItem.java and the corresponding XML layouts
  * Created by zerones on 04-Oct-17.
  */
 

@@ -1,9 +1,6 @@
 package com.example.eron.Model;
 
 public class SubCategoryItem {
-
-    private String categoryId;
-    private String subId;
     private String subCategoryName;
     private String isChecked;
 
@@ -11,29 +8,6 @@ public class SubCategoryItem {
         isChecked = checked;
         subCategoryName = name;
 
-    }
-
-//    public SubCategoryItem(){
-//        categoryId = null;
-//        subId = null;
-//        subCategoryName = null;
- //       isChecked = null;
- //   }
-
-    public String getCategoryId() {
-        return categoryId;
-    }
-
-    public void setCategoryId(String categoryId) {
-        this.categoryId = categoryId;
-    }
-
-    public String getSubId() {
-        return subId;
-    }
-
-    public void setSubId(String subId) {
-        this.subId = subId;
     }
 
     public String getSubCategoryName() {

@@ -16,7 +16,5 @@ class ConstantManager {
         public static final String IS_CHECKED = "is_checked";
         public static final String SUB_CATEGORY_NAME = "sub_category_name";
         public static final String CATEGORY_NAME = "category_name";
-        public static final String CATEGORY_ID = "category_id";
-        public static final String SUB_ID = "sub_id";
     }
 }

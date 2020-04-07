@@ -4,14 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ExpandableListView;
-
 import com.example.eron.Model.DataItem;
 import com.example.eron.Model.SubCategoryItem;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -21,7 +18,6 @@ public class SF_activity extends AppCompatActivity {
 
     private ArrayList<DataItem> arCategory;
     private ArrayList<SubCategoryItem> arSubCategory;
-    private ArrayList<ArrayList<SubCategoryItem>> arSubCategoryFinal;
 
     private ArrayList<HashMap<String, String>> parentItems;
     private ArrayList<ArrayList<HashMap<String, String>>> childItems;
@@ -34,6 +30,7 @@ public class SF_activity extends AppCompatActivity {
 
         btn = findViewById(R.id.btn);
 
+        //this moves to the next screen which shows the output of symptoms chosen
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,8 +50,9 @@ public class SF_activity extends AppCompatActivity {
         parentItems = new ArrayList<>();
         childItems = new ArrayList<>();
 
+
+        // This sets up the structure of the entire checklist
         DataItem dataItem = new DataItem();
-        dataItem.setCategoryId("1");
         dataItem.setCategoryName("Head/Neck");
 
         arSubCategory = new ArrayList<>();
@@ -68,8 +66,8 @@ public class SF_activity extends AppCompatActivity {
         dataItem.setSubCategory(arSubCategory);
         arCategory.add(dataItem);
 
+
         dataItem = new DataItem();
-        dataItem.setCategoryId("2");
         dataItem.setCategoryName("Eyes");
         arSubCategory = new ArrayList<>();
         arSubCategory.add(new SubCategoryItem(ConstantManager.CHECK_BOX_CHECKED_FALSE, "Eye color change"));
@@ -81,8 +79,8 @@ public class SF_activity extends AppCompatActivity {
         dataItem.setSubCategory(arSubCategory);
         arCategory.add(dataItem);
 
+
         dataItem = new DataItem();
-        dataItem.setCategoryId("3");
         dataItem.setCategoryName("Mouth");
         arSubCategory = new ArrayList<>();
         arSubCategory.add(new SubCategoryItem(ConstantManager.CHECK_BOX_CHECKED_FALSE, "Abnormal teeth"));
@@ -100,7 +98,6 @@ public class SF_activity extends AppCompatActivity {
 
 
         dataItem = new DataItem();
-        dataItem.setCategoryId("4");
         dataItem.setCategoryName("Speech");
         arSubCategory = new ArrayList<>();
         arSubCategory.add(new SubCategoryItem(ConstantManager.CHECK_BOX_CHECKED_FALSE, "Abnormal crying"));
@@ -114,7 +111,6 @@ public class SF_activity extends AppCompatActivity {
 
 
         dataItem = new DataItem();
-        dataItem.setCategoryId("5");
         dataItem.setCategoryName("Respiratory");
         arSubCategory = new ArrayList<>();
         arSubCategory.add(new SubCategoryItem(ConstantManager.CHECK_BOX_CHECKED_FALSE, "Barking Cough"));
@@ -129,7 +125,6 @@ public class SF_activity extends AppCompatActivity {
 
 
         dataItem = new DataItem();
-        dataItem.setCategoryId("6");
         dataItem.setCategoryName("Torso/Legs/Arms");
         arSubCategory = new ArrayList<>();
         arSubCategory.add(new SubCategoryItem(ConstantManager.CHECK_BOX_CHECKED_FALSE, "Asymmetrical ribs/back"));
@@ -145,8 +140,8 @@ public class SF_activity extends AppCompatActivity {
         dataItem.setSubCategory(arSubCategory);
         arCategory.add(dataItem);
 
+
         dataItem = new DataItem();
-        dataItem.setCategoryId("7");
         dataItem.setCategoryName("Digestion/Bowels");
         arSubCategory = new ArrayList<>();
         arSubCategory.add(new SubCategoryItem(ConstantManager.CHECK_BOX_CHECKED_FALSE, "Bloody stool"));
@@ -161,7 +156,6 @@ public class SF_activity extends AppCompatActivity {
 
 
         dataItem = new DataItem();
-        dataItem.setCategoryId("8");
         dataItem.setCategoryName("Urination");
         arSubCategory = new ArrayList<>();
         arSubCategory.add(new SubCategoryItem(ConstantManager.CHECK_BOX_CHECKED_FALSE, "Dark urine"));
@@ -176,8 +170,8 @@ public class SF_activity extends AppCompatActivity {
         dataItem.setSubCategory(arSubCategory);
         arCategory.add(dataItem);
 
+
         dataItem = new DataItem();
-        dataItem.setCategoryId("9");
         dataItem.setCategoryName("Skin/Nail");
         arSubCategory = new ArrayList<>();
         arSubCategory.add(new SubCategoryItem(ConstantManager.CHECK_BOX_CHECKED_FALSE, "Acne"));
@@ -201,7 +195,6 @@ public class SF_activity extends AppCompatActivity {
 
 
         dataItem = new DataItem();
-        dataItem.setCategoryId("10");
         dataItem.setCategoryName("Privates");
         arSubCategory = new ArrayList<>();
         arSubCategory.add(new SubCategoryItem(ConstantManager.CHECK_BOX_CHECKED_FALSE, "Anus coloration"));
@@ -213,7 +206,6 @@ public class SF_activity extends AppCompatActivity {
 
 
         dataItem = new DataItem();
-        dataItem.setCategoryId("11");
         dataItem.setCategoryName("Mental Health");
         arSubCategory = new ArrayList<>();
         arSubCategory.add(new SubCategoryItem(ConstantManager.CHECK_BOX_CHECKED_FALSE, "Anorexia"));
@@ -225,7 +217,6 @@ public class SF_activity extends AppCompatActivity {
 
 
         dataItem = new DataItem();
-        dataItem.setCategoryId("12");
         dataItem.setCategoryName("Common Symptoms");
         arSubCategory = new ArrayList<>();
         arSubCategory.add(new SubCategoryItem(ConstantManager.CHECK_BOX_CHECKED_FALSE, "Common cold"));
@@ -240,7 +231,6 @@ public class SF_activity extends AppCompatActivity {
 
 
         dataItem = new DataItem();
-        dataItem.setCategoryId("13");
         dataItem.setCategoryName("Urgent Symptoms");
         arSubCategory = new ArrayList<>();
         arSubCategory.add(new SubCategoryItem(ConstantManager.CHECK_BOX_CHECKED_FALSE, "Bone pain"));
@@ -254,7 +244,6 @@ public class SF_activity extends AppCompatActivity {
 
 
         dataItem = new DataItem();
-        dataItem.setCategoryId("14");
         dataItem.setCategoryName("Other");
         arSubCategory = new ArrayList<>();
         arSubCategory.add(new SubCategoryItem(ConstantManager.CHECK_BOX_CHECKED_FALSE, "Convulsions"));
@@ -270,25 +259,20 @@ public class SF_activity extends AppCompatActivity {
         arCategory.add(dataItem);
 
 
+        //Log.d("TAG", "setupReferences: "+arCategory.size());
 
-
-        Log.d("TAG", "setupReferences: "+arCategory.size());
-
+        //I think this finds the current state of all the checked boxes of the categories and symptoms
         for(DataItem data : arCategory){
-//                        Log.i("Item id",item.id);
             ArrayList<HashMap<String, String>> childArrayList =new ArrayList<HashMap<String, String>>();
             HashMap<String, String> mapParent = new HashMap<String, String>();
 
-            mapParent.put(ConstantManager.Parameter.CATEGORY_ID,data.getCategoryId());
             mapParent.put(ConstantManager.Parameter.CATEGORY_NAME,data.getCategoryName());
 
             int countIsChecked = 0;
             for(SubCategoryItem subCategoryItem : data.getSubCategory()) {
 
                 HashMap<String, String> mapChild = new HashMap<String, String>();
-                mapChild.put(ConstantManager.Parameter.SUB_ID,subCategoryItem.getSubId());
                 mapChild.put(ConstantManager.Parameter.SUB_CATEGORY_NAME,subCategoryItem.getSubCategoryName());
-                mapChild.put(ConstantManager.Parameter.CATEGORY_ID,subCategoryItem.getCategoryId());
                 mapChild.put(ConstantManager.Parameter.IS_CHECKED,subCategoryItem.getIsChecked());
 
                 if(subCategoryItem.getIsChecked().equalsIgnoreCase(ConstantManager.CHECK_BOX_CHECKED_TRUE)) {

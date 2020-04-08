@@ -34,7 +34,7 @@ public class SF_activity extends AppCompatActivity {
         submit_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SF_activity.this,CheckedActivity.class);
+                Intent intent = new Intent(SF_activity.this,tip_symptom_finder.class);
                 startActivity(intent);
             }
         });

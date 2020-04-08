@@ -11,6 +11,9 @@ import com.example.eron.Model.DataItem;
 import com.example.eron.Model.SubCategoryItem;
 import java.util.ArrayList;
 import java.util.HashMap;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 public class SF_activity extends AppCompatActivity {
     private Button submit_btn, clear_btn;
@@ -36,6 +39,7 @@ public class SF_activity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(SF_activity.this,tip_symptom_finder.class);
                 startActivity(intent);
+                //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new tip_symptom_finder()).commit();
             }
         });
 

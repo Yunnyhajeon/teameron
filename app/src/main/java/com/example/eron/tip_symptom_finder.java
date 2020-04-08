@@ -22,15 +22,16 @@ public class tip_symptom_finder extends AppCompatActivity {
     RecyclerView tip_recycler_view;
     List<Tip> tipList;
 
+    //@Nullable
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        //View view = inflater.inflate(R.layout.tip_symptom_finder1, container, false);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tip_symptom_finder1);
 
         tip_recycler_view = findViewById(R.id.tipView);
         initData();
         initRecyclerView();
-
     }
 
     private void initRecyclerView() {

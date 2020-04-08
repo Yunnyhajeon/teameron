@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class SF_activity extends AppCompatActivity {
-    private Button btn;
+    private Button submit_btn, clear_btn;
     private ExpandableListView lvCategory;
 
     private ArrayList<DataItem> arCategory;
@@ -28,10 +28,10 @@ public class SF_activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_s_f_activity);
 
-        btn = findViewById(R.id.btn);
+        submit_btn = findViewById(R.id.submit_btn);
 
         //this moves to the next screen which shows the output of symptoms chosen
-        btn.setOnClickListener(new View.OnClickListener() {
+        submit_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SF_activity.this,CheckedActivity.class);

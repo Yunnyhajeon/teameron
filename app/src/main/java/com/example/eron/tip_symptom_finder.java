@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -17,28 +18,25 @@ import java.util.List;
 import java.util.ArrayList;
 
 
-public class tip_symptom_finder_fragment extends Fragment {
+public class tip_symptom_finder extends AppCompatActivity {
     RecyclerView tip_recycler_view;
-
-
     List<Tip> tipList;
 
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.tip_symptom_finder1, container, false);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.tip_symptom_finder1);
 
-        tip_recycler_view = view.findViewById(R.id.tipView);
+        tip_recycler_view = findViewById(R.id.tipView);
         initData();
         initRecyclerView();
-
-        return view;
 
     }
 
     private void initRecyclerView() {
         TipRecyclerAdapter recyclerAdapter = new TipRecyclerAdapter(tipList);
         tip_recycler_view.setAdapter(recyclerAdapter);
-        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL);
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this, DividerItemDecoration.VERTICAL);
         tip_recycler_view.addItemDecoration(dividerItemDecoration);
     }
     private void initData() {

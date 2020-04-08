@@ -32,4 +32,7 @@
     <string name="disclaimer_title"><u>DISCLAIMER</u></string>
     <string name="moreinfo_title"><u>MORE INFO</u></string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

@@ -33,7 +33,15 @@ public class home_screen_fragment extends Fragment implements View.OnClickListen
                 startActivity(i);
             }
         });
-        finder_btn.setOnClickListener(this);
+        //finder_btn.setOnClickListener(this);
+        finder_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), SF_activity.class);
+                startActivity(i);
+            }
+        });
+
         medical_guide_btn.setOnClickListener(this);
         emergency_guide_btn.setOnClickListener(this);
         disclaimer_btn.setOnClickListener(this);
@@ -48,10 +56,10 @@ public class home_screen_fragment extends Fragment implements View.OnClickListen
 //                selected_fragment = new ebook_fragment();
 //                break;
 //            }
-            case R.id.finder_btn: {
-                selected_fragment = new finder_fragment();
-                break;
-            }
+            //case R.id.finder_btn: {
+              //  selected_fragment = new finder_fragment();
+                //break;
+            //}
             case R.id.medical_guide_btn: {
                 selected_fragment = new medical_guide_fragment();
                 break;

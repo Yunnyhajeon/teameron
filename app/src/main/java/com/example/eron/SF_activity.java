@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ExpandableListView;
+import android.widget.Toolbar;
+
 import com.example.eron.Model.DataItem;
 import com.example.eron.Model.SubCategoryItem;
 import java.util.ArrayList;
@@ -30,6 +32,7 @@ public class SF_activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_s_f_activity);
+
 
         submit_btn = findViewById(R.id.submit_btn);
 

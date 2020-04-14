@@ -1,137 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_image"
     android:backgroundTint="#8035B6DA"
-    android:backgroundTintMode="src_over">
-
+    android:backgroundTintMode="src_over"
+    android:id="@+id/relativeLayout">
+    re
 
     <TextView
         android:id="@+id/textview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
+        android:layout_width="240dp"
+        android:layout_height="160dp"
         android:layout_marginStart="100dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="100dp"
-        android:layout_marginRight="100dp"
+        android:background="@drawable/textview_border"
         android:enabled="true"
         android:gravity="center"
-        android:background="@drawable/textview_border"
         android:padding="10dp"
         android:shadowColor="#FFFFFF"
-        android:text="SHOULD I GO TO THE ER?"
+        android:text="SHOULD I\nGO TO THE ER?"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         android:textStyle="bold"
         android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:visibility="visible" />
+
     <Button
         android:id="@+id/book_btn"
         android:layout_width="160dp"
         android:layout_height="130dp"
-        android:layout_below="@+id/textview"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="64dp"
         android:background="@drawable/rounded_button"
         android:drawableTop="@drawable/ic_import_contacts_24px"
         android:paddingTop="20dp"
-        android:text="E-Book" />
+        android:text="E-Book"
+        android:textSize="18dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview" />
 
     <Button
         android:id="@+id/medical_guide_btn"
         android:layout_width="160dp"
         android:layout_height="130dp"
-        android:layout_below="@+id/book_btn"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="42dp"
         android:background="@drawable/rounded_button"
-        android:drawableTop="@drawable/ic_favorite_24px"
+        android:drawableTop="@drawable/ic_caduceus_icon"
         android:paddingTop="20dp"
-        android:text="Medical Guide" />
+        android:text="Medical Guide"
+        android:textSize="18dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/book_btn" />
 
     <Button
         android:id="@+id/finder_btn"
         android:layout_width="160dp"
         android:layout_height="130dp"
-        android:layout_below="@+id/textview"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="42dp"
-        android:layout_marginLeft="42dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_toEndOf="@+id/book_btn"
-        android:layout_toRightOf="@+id/book_btn"
+        android:layout_marginTop="64dp"
+        android:layout_marginRight="24dp"
         android:background="@drawable/rounded_button"
         android:drawableTop="@drawable/ic_find_in_page_24px"
         android:paddingTop="20dp"
-        android:text="Symptom Finder" />
+        android:text="Symptom Finder"
+        android:textSize="18dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview" />
 
     <Button
         android:id="@+id/emergency_guide_btn"
         android:layout_width="160dp"
         android:layout_height="130dp"
-        android:layout_below="@+id/finder_btn"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="42dp"
-        android:layout_marginLeft="42dp"
         android:layout_marginTop="42dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_toEndOf="@+id/medical_guide_btn"
-        android:layout_toRightOf="@+id/medical_guide_btn"
+        android:layout_marginRight="24dp"
         android:background="@drawable/rounded_button"
         android:drawableTop="@drawable/ic_new_releases_24px"
         android:paddingTop="20dp"
-        android:text="Emergency Guide" />
+        android:text="Emerg. Guide"
+        android:textSize="18dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/finder_btn" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:orientation="horizontal"
-        android:weightSum="1">
+        android:weightSum="1"
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <Button
             android:id="@+id/disclaimer_btn"
             android:layout_width="0dp"
             android:layout_height="75dp"
-            android:layout_weight="0.5"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="0dp"
             android:layout_marginLeft="0dp"
             android:layout_marginBottom="0dp"
+            android:layout_weight="0.5"
             android:background="#FFFFFF"
+            android:radius="10dp"
             android:singleLine="false"
             android:text="@string/disclaimer_title"
             android:textColor="@color/design_default_color_primary_dark"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:radius="10dp"/>
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/more_info_btn"
             android:layout_width="0dp"
             android:layout_height="75dp"
-            android:layout_weight="0.5"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
@@ -142,10 +133,11 @@
             android:layout_marginBottom="0dp"
             android:layout_toEndOf="@+id/disclaimer_btn"
             android:layout_toRightOf="@+id/disclaimer_btn"
+            android:layout_weight="0.5"
             android:background="#FFFFFF"
             android:text="@string/moreinfo_title"
             android:textColor="@color/design_default_color_primary_dark"
             android:textSize="18sp"
             android:textStyle="bold" />
     </LinearLayout>
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

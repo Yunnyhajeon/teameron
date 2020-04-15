@@ -64,6 +64,7 @@
             android:backgroundTint="#21A1C5"
             android:fontFamily="@font/raleway_bold"
             android:text="@string/S"
+            android:textColor="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

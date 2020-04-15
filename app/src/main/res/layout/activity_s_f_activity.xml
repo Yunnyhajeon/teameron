@@ -7,16 +7,31 @@
     android:orientation="vertical"
     tools:context=".SF_activity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/SF_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#21A1C5"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:logo="@drawable/step"
+        app:navigationIcon="@drawable/ic_arrow" />
+
     <TextView
         android:id="@+id/instructions"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text='Select a category to see relevant symptoms. Select the bold, black circles to indicate which symptoms are present. To select all the symptoms underneath a category, select the circle next to the category name. (Ie. Click the bold circle next to "Head/Neck". When you are finished, click done.' />
+        android:layout_height="109dp"
+        android:background="#f5f5f5"
+        android:fontFamily="@font/raleway_light"
+        android:gravity="center"
+        android:text="@string/SF_instructions"
+        android:textSize="26sp" />
 
     <ExpandableListView
         android:id="@+id/lvCategory"
         android:layout_width="wrap_content"
-        android:layout_height="532dp"
+        android:layout_height="420dp"
         android:childDivider="@color/colorBlack"
         android:divider="@null"
         android:dividerHeight="0dp">
@@ -31,14 +46,28 @@
             android:id="@+id/clear_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Clear All" />
+            android:layout_marginStart="60dp"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="#f5f5f5"
+            android:fontFamily="@font/raleway_light"
+            android:text="@string/C"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/submit_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Submit"
-            app:layout_constraintEnd_toEndOf="parent" />
+            android:layout_marginEnd="60dp"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="#21A1C5"
+            android:fontFamily="@font/raleway_bold"
+            android:text="@string/S"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>

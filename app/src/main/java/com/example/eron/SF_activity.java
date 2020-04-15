@@ -7,10 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ExpandableListView;
+import android.widget.Toolbar;
+
 import com.example.eron.Model.DataItem;
 import com.example.eron.Model.SubCategoryItem;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -25,14 +29,23 @@ public class SF_activity extends AppCompatActivity {
     private ArrayList<HashMap<String, String>> parentItems;
     private ArrayList<ArrayList<HashMap<String, String>>> childItems;
     private MyCategoriesExpandableListAdapter myCategoriesExpandableListAdapter;
+    private ArrayList<DataItem> itemsClicked;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_s_f_activity);
 
-        submit_btn = findViewById(R.id.submit_btn);
 
+        clear_btn = findViewById(R.id.clear_btn);
+        clear_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            }
+        });
+
+
+        submit_btn = findViewById(R.id.submit_btn);
         //this moves to the next screen which shows the output of symptoms chosen
         submit_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,6 +57,12 @@ public class SF_activity extends AppCompatActivity {
         });
 
         setupReferences();
+
+    }
+
+    private void call(){
+        myCategoriesExpandableListAdapter = new MyCategoriesExpandableListAdapter(this,parentItems,childItems,false);
+        lvCategory.setAdapter(myCategoriesExpandableListAdapter);
     }
 
     private void setupReferences() {
@@ -53,7 +72,7 @@ public class SF_activity extends AppCompatActivity {
         arSubCategory = new ArrayList<>();
         parentItems = new ArrayList<>();
         childItems = new ArrayList<>();
-
+        itemsClicked = new ArrayList<>();
 
         // This sets up the structure of the entire checklist
         DataItem dataItem = new DataItem();
@@ -289,6 +308,7 @@ public class SF_activity extends AppCompatActivity {
             if(countIsChecked == data.getSubCategory().size()) {
 
                 data.setIsChecked(ConstantManager.CHECK_BOX_CHECKED_TRUE);
+                itemsClicked.add(data);
             }else {
                 data.setIsChecked(ConstantManager.CHECK_BOX_CHECKED_FALSE);
             }

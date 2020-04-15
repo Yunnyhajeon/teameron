@@ -34,6 +34,27 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import android.widget.ViewFlipper;
+import android.app.Activity;
+import android.app.ProgressDialog;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.os.Handler;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.Button;
+import android.widget.ViewFlipper;
+
+import android.view.View.OnClickListener;
+
+
+
+
+
 public class ebook extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
@@ -47,26 +68,36 @@ public class ebook extends AppCompatActivity {
     MenuItemModel prevSection, nextSection;
     int currentSection;
 
+    private ViewFlipper flipview;
+    private WebView mainView;
+    private WebView catView;
+    private WebView searchView;
+
+
+    private static int _counter = 0;
+    private Button _decrease;
+    private Button _increase;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ebook);
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Red Light Warning Signals");
 
-
         expandableListView = findViewById(R.id.expandable_list_view);
         prepareMenuData();
         populateExpandableList();
-
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         
@@ -78,6 +109,7 @@ public class ebook extends AppCompatActivity {
                 return true;
             }
         });
+
         /*
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
@@ -91,7 +123,376 @@ public class ebook extends AppCompatActivity {
         NavigationUI.setupWithNavController(navigationView, navController);
 
          */
+
+        /*WebView mWebView = null;
+        mWebView.getSettings().setJavaScriptEnabled(true);
+        mWebView.loadUrl("file:///android_asset/part1_bodyparts/Head_1_Headache.html");
+        viewFlipper.addView(mWebView);*/
+
+        _decrease = (Button) findViewById(R.id.button1);
+        _increase = (Button) findViewById(R.id.button2);
+        WebView myWebView = (WebView) findViewById(R.id.webview);
+        if (_counter == 0) {
+            myWebView.loadUrl("file:///android_asset/appendices/titlepage.html");}
+
+
+
+        _decrease.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                _counter--;
+                WebView myWebView = (WebView) findViewById(R.id.webview);
+                if (_counter <= 0) {
+                    myWebView.loadUrl("file:///android_asset/appendices/titlepage.html");
+                } else if (_counter == 1) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Head_1_Headache.html");
+                } else if (_counter == 2) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Head_2_HeadInjury.html");
+                } else if (_counter == 3) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Head_3_PsychologicalProblems.html");
+                } else if (_counter == 4) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Eyes_1_Eyelids.html");
+                } else if (_counter == 5) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Eyes_2_Vision_Abnormalities.html");
+                } else if (_counter == 6) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Eyes_3_Eye_Pain.html");
+                } else if (_counter == 7) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Ear, Nose, Mouth, Throat, and Neck_1_Ear.html");
+                } else if (_counter == 8) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Ear, Nose, Mouth, Throat, and Neck_2_Nose.html");
+                } else if (_counter == 9) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Ear, Nose, Mouth, Throat, and Neck_3_Mouth.html");
+                } else if (_counter == 10) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Ear, Nose, Mouth, Throat, and Neck_4_Throat.html");
+                } else if (_counter == 11) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Ear, Nose, Mouth, Throat, and Neck_4_Neck.html");
+                } else if (_counter == 12) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Arms and Hands_1_Armpits.html");
+                } else if (_counter == 13) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Arms and Hands_2_Arms.html");
+                } else if (_counter == 14) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Arms and Hands_3_Hands.html");
+                } else if (_counter == 15) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Arms and Hands_4_Fingers.html");
+                } else if (_counter == 16) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Arms and Hands_5_Fingernails.html");
+                } else if (_counter == 17) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Breast.html");
+                } else if (_counter == 18) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Chest Area_1_Breathing_Difficulties.html");
+                } else if (_counter == 19) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Chest Area_2_Cough.html");
+                } else if (_counter == 20) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Chest Area_3_Chest Pain and Discomfort.html");
+                } else if (_counter == 21) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Chest Area_4_Irregular Heartbeats and Heart Sounds.html");
+                } else if (_counter == 22) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Belly, Stomach Area, or Abdomen_1_How to Assess Belly Pain.html");
+                } else if (_counter == 23) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Belly, Stomach Area, or Abdomen_2_Indigestion.html");
+                } else if (_counter == 24) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Belly, Stomach Area, or Abdomen_3_Belly Pain.html");
+                } else if (_counter == 25) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Belly, Stomach Area, or Abdomen_4_Bulges and Swelling in the Belly.html");
+                } else if (_counter == 26) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Belly, Stomach Area, or Abdomen_5_Sense of Fullness.html");
+                } else if (_counter == 27) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Genitalia_1_Male.html");
+                } else if (_counter == 28) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Genitalia_2_Genders.html");
+                } else if (_counter == 29) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Genitalia_3_Female.html");
+                } else if (_counter == 30) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Bowel Movement_1_Pain.html");
+                } else if (_counter == 31) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Bowel Movement_2_Form and Frequency.html");
+                } else if (_counter == 32) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Bowel Movement_3_Color.html");
+                } else if (_counter == 33) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Urine_1_Appearance.html");
+                } else if (_counter == 34) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Urine_2_Discomfort.html");
+                } else if (_counter == 35) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Urine_3_Frequency.html");
+                } else if (_counter == 36) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Menstruation_1.html");
+                } else if (_counter == 37) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Menstruation_2.html");
+                } else if (_counter == 38) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Menstruation_3.html");
+                } else if (_counter == 39) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Menstruation_4.html");
+                } else if (_counter == 40) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Groin.html");
+                } else if (_counter == 41) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/HBLA_1.html");
+                } else if (_counter == 42) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/HBLA_2.html");
+                } else if (_counter == 43) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Skin_1_Bites.html");
+                } else if (_counter == 44) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Skin_2_Discolorations.html");
+                } else if (_counter == 45) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Skin_3_Freckles, Moles, Bumps, Warts, Lumps, Plaques, and Patches.html");
+                } else if (_counter == 46) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Skin_4_Infections.html");
+                } else if (_counter == 47) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Skin_5_Itchy Skin.html");
+                } else if (_counter == 48) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Skin_6_Rashes.html");
+                } else if (_counter == 49) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Skin_7_Sores.html");
+                } else if (_counter == 50) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Back_1_Back Pain.html");
+                } else if (_counter == 51) {
+                    myWebView.loadUrl("file:///android_asset/part2_SymptomsAndSigns/Allergic Reactions.html");
+                } else if (_counter == 52) {
+                    myWebView.loadUrl("file:///android_asset/part2_SymptomsAndSigns/Blood And Blood Pressure.html");
+                } else if (_counter == 53) {
+                    myWebView.loadUrl("file:///android_asset/part2_SymptomsAndSigns/Dehydration.html");
+                } else if (_counter == 54) {
+                    myWebView.loadUrl("file:///android_asset/part2_SymptomsAndSigns/Fever.html");
+                } else if (_counter == 55) {
+                    myWebView.loadUrl("file:///android_asset/part2_SymptomsAndSigns/Medication.html");
+                } else if (_counter == 56) {
+                    myWebView.loadUrl("file:///android_asset/part2_SymptomsAndSigns/Passing Out, Loss of Consciousness.html");
+                } else if (_counter == 57) {
+                    myWebView.loadUrl("file:///android_asset/part2_SymptomsAndSigns/Temperature Change.html");
+                } else if (_counter == 58) {
+                    myWebView.loadUrl("file:///android_asset/part2_SymptomsAndSigns/Weakness.html");
+                } else if (_counter == 59) {
+                    myWebView.loadUrl("file:///android_asset/part2_SymptomsAndSigns/Weight Loss.html");
+                } else if (_counter == 60) {
+                    myWebView.loadUrl("file:///android_asset/part3_pregnancy/Pregnancy_and_Postpregnancy.html");
+                } else if (_counter == 61) {
+                    myWebView.loadUrl("file:///android_asset/part4_pediatrics/Head_1_Pediatric_Headache.html");
+                } else if (_counter == 62) {
+                    myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_PsychologicalProblems.html");
+                } else if (_counter == 63) {
+                    myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Eyes.html");
+                } else if (_counter == 64) {
+                    myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Throat.html");
+                } else if (_counter == 65) {
+                    myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Arms_Hands_Fingers_Nails.html");
+                } else if (_counter == 66) {
+                    myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Back.html");
+                } else if (_counter == 67) {
+                    myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Chest.html");
+                } else if (_counter == 68) {
+                    myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Belly.html");
+                } else if (_counter == 69) {
+                    myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Urine.html");
+                } else if (_counter == 70) {
+                    myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Bowel_Movement.html");
+                } else if (_counter == 71) {
+                    myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Genitalia.html");
+                } else if (_counter == 72) {
+                    myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Legs.html");
+                } else if (_counter == 73) {
+                    myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Skin_Hair.html");
+                } else if (_counter == 74) {
+                    myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Allergic_Reactions.html");
+                } else if (_counter == 75) {
+                    myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Allergic_Miscellaneous.html");
+                } else if (_counter == 76) {
+                    myWebView.loadUrl("file:///android_asset/part5_prevention/Prevention_Error.html");
+                } else if (_counter == 77) {
+                    myWebView.loadUrl("file:///android_asset/appendices/");
+                } else if (_counter == 78) {
+                    myWebView.loadUrl("file:///android_asset/appendices/appendixA.html");
+                } else if (_counter == 79) {
+                    myWebView.loadUrl("file:///android_asset/appendices/appendixB.html");
+                } else if (_counter == 80) {
+                    myWebView.loadUrl("file:///android_asset/appendices/appendixC.html");
+                } else if (_counter == 81) {
+                    myWebView.loadUrl("file:///android_asset/appendices/appendixD.html");
+                }
+            }
+        });
+
+        _increase.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                _counter++;
+                WebView myWebView = (WebView) findViewById(R.id.webview);
+                if (_counter == 1) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Head_1_Headache.html");
+                } else if (_counter == 2) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Head_2_HeadInjury.html");
+                } else if (_counter == 3) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Head_3_PsychologicalProblems.html");
+                } else if (_counter == 4) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Eyes_1_Eyelids.html");
+                } else if (_counter == 5) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Eyes_2_Vision_Abnormalities.html");
+                } else if (_counter == 6) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Eyes_3_Eye_Pain.html");
+                } else if (_counter == 7) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Ear, Nose, Mouth, Throat, and Neck_1_Ear.html");
+                } else if (_counter == 8) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Ear, Nose, Mouth, Throat, and Neck_2_Nose.html");
+                } else if (_counter == 9) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Ear, Nose, Mouth, Throat, and Neck_3_Mouth.html");
+                } else if (_counter == 10) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Ear, Nose, Mouth, Throat, and Neck_4_Throat.html");
+                } else if (_counter == 11) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Ear, Nose, Mouth, Throat, and Neck_4_Neck.html");
+                } else if (_counter == 12) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Arms and Hands_1_Armpits.html");
+                } else if (_counter == 13) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Arms and Hands_2_Arms.html");
+                } else if (_counter == 14) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Arms and Hands_3_Hands.html");
+                } else if (_counter == 15) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Arms and Hands_4_Fingers.html");
+                } else if (_counter == 16) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Arms and Hands_5_Fingernails.html");
+                } else if (_counter == 17) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Breast.html");
+                } else if (_counter == 18) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Chest Area_1_Breathing_Difficulties.html");
+                } else if (_counter == 19) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Chest Area_2_Cough.html");
+                } else if (_counter == 20) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Chest Area_3_Chest Pain and Discomfort.html");
+                } else if (_counter == 21) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Chest Area_4_Irregular Heartbeats and Heart Sounds.html");
+                } else if (_counter == 22) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Belly, Stomach Area, or Abdomen_1_How to Assess Belly Pain.html");
+                } else if (_counter == 23) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Belly, Stomach Area, or Abdomen_2_Indigestion.html");
+                } else if (_counter == 24) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Belly, Stomach Area, or Abdomen_3_Belly Pain.html");
+                } else if (_counter == 25) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Belly, Stomach Area, or Abdomen_4_Bulges and Swelling in the Belly.html");
+                } else if (_counter == 26) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Belly, Stomach Area, or Abdomen_5_Sense of Fullness.html");
+                } else if (_counter == 27) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Genitalia_1_Male.html");
+                } else if (_counter == 28) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Genitalia_2_Genders.html");
+                } else if (_counter == 29) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Genitalia_3_Female.html");
+                } else if (_counter == 30) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Bowel Movement_1_Pain.html");
+                } else if (_counter == 31) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Bowel Movement_2_Form and Frequency.html");
+                } else if (_counter == 32) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Bowel Movement_3_Color.html");
+                } else if (_counter == 33) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Urine_1_Appearance.html");
+                } else if (_counter == 34) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Urine_2_Discomfort.html");
+                } else if (_counter == 35) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Urine_3_Frequency.html");
+                } else if (_counter == 36) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Menstruation_1.html");
+                } else if (_counter == 37) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Menstruation_2.html");
+                } else if (_counter == 38) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Menstruation_3.html");
+                } else if (_counter == 39) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Menstruation_4.html");
+                } else if (_counter == 40) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Groin.html");
+                } else if (_counter == 41) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/HBLA_1.html");
+                } else if (_counter == 42) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/HBLA_2.html");
+                } else if (_counter == 43) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Skin_1_Bites.html");
+                } else if (_counter == 44) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Skin_2_Discolorations.html");
+                } else if (_counter == 45) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Skin_3_Freckles, Moles, Bumps, Warts, Lumps, Plaques, and Patches.html");
+                } else if (_counter == 46) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Skin_4_Infections.html");
+                } else if (_counter == 47) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Skin_5_Itchy Skin.html");
+                } else if (_counter == 48) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Skin_6_Rashes.html");
+                } else if (_counter == 49) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Skin_7_Sores.html");
+                } else if (_counter == 50) {
+                    myWebView.loadUrl("file:///android_asset/part1_bodyparts/Back_1_Back Pain.html");
+                } else if (_counter == 51) {
+                    myWebView.loadUrl("file:///android_asset/part2_SymptomsAndSigns/Allergic Reactions.html");
+                } else if (_counter == 52) {
+                    myWebView.loadUrl("file:///android_asset/part2_SymptomsAndSigns/Blood And Blood Pressure.html");
+                } else if (_counter == 53) {
+                    myWebView.loadUrl("file:///android_asset/part2_SymptomsAndSigns/Dehydration.html");
+                } else if (_counter == 54) {
+                    myWebView.loadUrl("file:///android_asset/part2_SymptomsAndSigns/Fever.html");
+                } else if (_counter == 55) {
+                    myWebView.loadUrl("file:///android_asset/part2_SymptomsAndSigns/Medication.html");
+                } else if (_counter == 56) {
+                    myWebView.loadUrl("file:///android_asset/part2_SymptomsAndSigns/Passing Out, Loss of Consciousness.html");
+                } else if (_counter == 57) {
+                    myWebView.loadUrl("file:///android_asset/part2_SymptomsAndSigns/Temperature Change.html");
+                } else if (_counter == 58) {
+                    myWebView.loadUrl("file:///android_asset/part2_SymptomsAndSigns/Weakness.html");
+                } else if (_counter == 59) {
+                    myWebView.loadUrl("file:///android_asset/part2_SymptomsAndSigns/Weight Loss.html");
+                } else if (_counter == 60) {
+                    myWebView.loadUrl("file:///android_asset/part3_pregnancy/Pregnancy_and_Postpregnancy.html");
+                } else if (_counter == 61) {
+                    myWebView.loadUrl("file:///android_asset/part4_pediatrics/Head_1_Pediatric_Headache.html");
+                } else if (_counter == 62) {
+                    myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_PsychologicalProblems.html");
+                } else if (_counter == 63) {
+                    myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Eyes.html");
+                } else if (_counter == 64) {
+                    myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Throat.html");
+                } else if (_counter == 65) {
+                    myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Arms_Hands_Fingers_Nails.html");
+                } else if (_counter == 66) {
+                    myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Back.html");
+                } else if (_counter == 67) {
+                    myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Chest.html");
+                } else if (_counter == 68) {
+                    myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Belly.html");
+                } else if (_counter == 69) {
+                    myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Urine.html");
+                } else if (_counter == 70) {
+                    myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Bowel_Movement.html");
+                } else if (_counter == 71) {
+                    myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Genitalia.html");
+                } else if (_counter == 72) {
+                    myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Legs.html");
+                } else if (_counter == 73) {
+                    myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Skin_Hair.html");
+                } else if (_counter == 74) {
+                    myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Allergic_Reactions.html");
+                } else if (_counter == 75) {
+                    myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Allergic_Miscellaneous.html");
+                } else if (_counter == 76) {
+                    myWebView.loadUrl("file:///android_asset/part5_prevention/Prevention_Error.html");
+                } else if (_counter == 77) {
+                    myWebView.loadUrl("file:///android_asset/appendices/");
+                } else if (_counter == 78) {
+                    myWebView.loadUrl("file:///android_asset/appendices/appendixA.html");
+                } else if (_counter == 79) {
+                    myWebView.loadUrl("file:///android_asset/appendices/appendixB.html");
+                } else if (_counter == 80) {
+                    myWebView.loadUrl("file:///android_asset/appendices/appendixC.html");
+                } else if (_counter == 81) {
+                    myWebView.loadUrl("file:///android_asset/appendices/appendixD.html");
+                } else if (_counter >= 82) {
+                    _counter--;
+                    myWebView.loadUrl("file:///android_asset/appendices/appendixD.html");
+                }
+            }
+        });
+
     }
+
+
+    /*public void previousView(View v) {
+        WebView myWebView = (WebView) findViewById(R.id.webview);
+        myWebView.loadUrl("file:///android_asset/part1_bodyparts/Head_1_Headache.html");
+    }*/
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

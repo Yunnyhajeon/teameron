@@ -5,6 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import android.widget.TextView;
 import android.widget.ImageView;
@@ -24,7 +25,7 @@ public class TipRecyclerAdapter extends RecyclerView.Adapter<TipRecyclerAdapter.
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View view = layoutInflater.inflate(R.layout.tip_row_item, parent, false);
+        View view = layoutInflater.inflate(R.layout.tip_row_item1, parent, false);
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
     }
@@ -33,6 +34,11 @@ public class TipRecyclerAdapter extends RecyclerView.Adapter<TipRecyclerAdapter.
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.tags.setText(tipList.get(position).getTags());
         holder.number.setText(tipList.get(position).getNumber());
+        holder.tip.setText(tipList.get(position).getTip());
+        holder.body.setText(tipList.get(position).getBody());
+
+        boolean isExpand = tipList.get(position).isExpand();
+        holder.expandableLayout.setVisibility(isExpand ? View.VISIBLE : View.GONE);
     }
 
     @Override
@@ -42,7 +48,8 @@ public class TipRecyclerAdapter extends RecyclerView.Adapter<TipRecyclerAdapter.
 
     class ViewHolder extends RecyclerView.ViewHolder {
         ImageView imageView;
-        TextView tags, number;
+        TextView tags, number, tip, body;
+        ConstraintLayout expandableLayout;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -50,7 +57,19 @@ public class TipRecyclerAdapter extends RecyclerView.Adapter<TipRecyclerAdapter.
             imageView = itemView.findViewById(R.id.imageView);
             tags = itemView.findViewById(R.id.tags);
             number = itemView.findViewById(R.id.number);
+            tip = itemView.findViewById(R.id.tip);
+            body = itemView.findViewById(R.id.body);
 
+            expandableLayout = itemView.findViewById(R.id.expandableLayout);
+
+            imageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Tip tip = tipList.get(getAdapterPosition());
+                    tip.setExpand(!tip.isExpand());
+                    notifyItemChanged(getAdapterPosition());
+                }
+            });
         }
     }
 }

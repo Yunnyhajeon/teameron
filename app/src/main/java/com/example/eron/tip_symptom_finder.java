@@ -44,8 +44,10 @@ public class tip_symptom_finder extends AppCompatActivity {
     String tipDir = "Tips";
     HashMap<Integer, List<String>> tipMap = new HashMap<>();
 
+    //@Nullable
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        //View view = inflater.inflate(R.layout.tip_symptom_finder1, container, false);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tip_symptom_finder1);
 
@@ -78,7 +80,6 @@ public class tip_symptom_finder extends AppCompatActivity {
         tip_recycler_view = findViewById(R.id.tipView);
         initData(tipMapKeys);
         initRecyclerView();
-
     }
 
     private void initRecyclerView() {

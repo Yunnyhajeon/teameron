@@ -38,6 +38,7 @@ public class home_screen_fragment extends Fragment implements View.OnClickListen
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(), SF_activity.class);
+                //Intent i = new Intent(getActivity(), tip_symptom_finder.class);
                 startActivity(i);
             }
         });
@@ -56,10 +57,10 @@ public class home_screen_fragment extends Fragment implements View.OnClickListen
 //                selected_fragment = new ebook_fragment();
 //                break;
 //            }
-            //case R.id.finder_btn: {
-              //  selected_fragment = new finder_fragment();
-                //break;
-            //}
+            /*case R.id.finder_btn: {
+                selected_fragment = new tip_symptom_finder();
+                break;
+            }*/
             case R.id.medical_guide_btn: {
                 selected_fragment = new medical_guide_fragment();
                 break;

@@ -5,12 +5,14 @@ public class Tip {
     private String tags;
     private String tip;
     private String body;
+    private boolean expand;
 
     public Tip(String number, String tags, String tip, String body) {
         this.number = number;
         this.tags = tags;
         this.tip = tip;
         this.body = body;
+        this.expand = false;
     }
 
     public String getTags() {
@@ -40,4 +42,8 @@ public class Tip {
     public void setNumber(String number) {
         this.number = number;
     }
+
+    public boolean isExpand() {return expand;}
+
+    public void setExpand(boolean expand) {this.expand = expand;}
 }

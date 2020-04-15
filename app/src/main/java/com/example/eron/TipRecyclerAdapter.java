@@ -32,7 +32,7 @@ public class TipRecyclerAdapter extends RecyclerView.Adapter<TipRecyclerAdapter.
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.tags.setText(tipList.get(position).getTags());
-        holder.number.setText("TIP " + tipList.get(position).getNumber());
+        holder.number.setText(tipList.get(position).getNumber());
     }
 
     @Override

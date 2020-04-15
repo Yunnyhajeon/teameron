@@ -1,16 +1,16 @@
 package com.example.eron;
 
 public class Tip {
-    private int number;
+    private String number;
     private String tags;
     private String tip;
-    private String url;
+    private String body;
 
-    public Tip(int number, String tags, String tip, String url) {
+    public Tip(String number, String tags, String tip, String body) {
         this.number = number;
         this.tags = tags;
         this.tip = tip;
-        this.url = url;
+        this.body = body;
     }
 
     public String getTags() {
@@ -29,20 +29,15 @@ public class Tip {
         this.tip = tip;
     }
 
+    public String getBody() { return body; }
 
-    public String getURL() {
-        return url;
-    }
+    public void setBody(String body) { this.body = body; }
 
-    public void setURL(String url) {
-        this.url = url;
-    }
-
-    public int getNumber() {
+    public String getNumber() {
         return number;
     }
 
-    public void setNumber(int number) {
+    public void setNumber(String number) {
         this.number = number;
     }
 }

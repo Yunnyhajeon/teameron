@@ -136,7 +136,6 @@ public class ebook extends AppCompatActivity {
             myWebView.loadUrl("file:///android_asset/appendices/titlepage.html");}
 
 
-
         _decrease.setOnClickListener(new OnClickListener() {
 
             @Override
@@ -144,6 +143,7 @@ public class ebook extends AppCompatActivity {
                 _counter--;
                 WebView myWebView = (WebView) findViewById(R.id.webview);
                 if (_counter <= 0) {
+                    _counter = 0;
                     myWebView.loadUrl("file:///android_asset/appendices/titlepage.html");
                 } else if (_counter == 1) {
                     myWebView.loadUrl("file:///android_asset/part1_bodyparts/Head_1_Headache.html");

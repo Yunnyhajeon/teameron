@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ExpandableListView;
-import android.widget.Toolbar;
 
 import com.example.eron.Model.DataItem;
 import com.example.eron.Model.SubCategoryItem;
@@ -15,6 +14,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -41,6 +41,7 @@ public class SF_activity extends AppCompatActivity {
         clear_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clearAll();
             }
         });
 
@@ -53,6 +54,14 @@ public class SF_activity extends AppCompatActivity {
                 Intent intent = new Intent(SF_activity.this,tip_symptom_finder.class);
                 startActivity(intent);
                 //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new tip_symptom_finder()).commit();
+            }
+        });
+
+        androidx.appcompat.widget.Toolbar toolbar = (Toolbar) findViewById(R.id.SF_header);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
             }
         });
 
@@ -324,5 +333,15 @@ public class SF_activity extends AppCompatActivity {
 
         myCategoriesExpandableListAdapter = new MyCategoriesExpandableListAdapter(this,parentItems,childItems,false);
         lvCategory.setAdapter(myCategoriesExpandableListAdapter);
+    }
+
+    public void clearAll() {
+        for (int i = 0; i < myCategoriesExpandableListAdapter.parentItems.size(); i++ ){
+            myCategoriesExpandableListAdapter.parentItems.get(i).put(ConstantManager.Parameter.IS_CHECKED, ConstantManager.CHECK_BOX_CHECKED_FALSE);
+            for (int j = 0; j < myCategoriesExpandableListAdapter.childItems.get(i).size(); j++) {
+                myCategoriesExpandableListAdapter.childItems.get(i).get(j).put(ConstantManager.Parameter.IS_CHECKED, ConstantManager.CHECK_BOX_CHECKED_FALSE);
+            }
+            myCategoriesExpandableListAdapter.notifyDataSetChanged();
+        }
     }
 }

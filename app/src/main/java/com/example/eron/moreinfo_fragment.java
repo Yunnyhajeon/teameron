@@ -18,7 +18,7 @@ public class moreinfo_fragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.moreinfo_frag, container, false);
-        TextView moreInfoText = (TextView) view.findViewById(R.id.more_info_textview);
+        TextView moreInfoText = view.findViewById(R.id.more_info_textview);
         moreInfoText.setMovementMethod(new ScrollingMovementMethod());
         home_btn = view.findViewById(R.id.home_btn_from_moreinfo);
         home_btn.setOnClickListener(new View.OnClickListener() {

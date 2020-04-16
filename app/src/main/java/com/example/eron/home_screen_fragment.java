@@ -18,7 +18,7 @@ public class home_screen_fragment extends Fragment implements View.OnClickListen
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.home_screen_frag, container, false);
-        ebook_btn = (Button)view.findViewById(R.id.book_btn);
+        ebook_btn = view.findViewById(R.id.book_btn);
         finder_btn = view.findViewById(R.id.finder_btn);
         medical_guide_btn = view.findViewById(R.id.medical_guide_btn);
         emergency_guide_btn= view.findViewById(R.id.emergency_guide_btn);

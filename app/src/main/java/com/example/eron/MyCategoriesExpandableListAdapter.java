@@ -33,8 +33,8 @@ public class MyCategoriesExpandableListAdapter extends BaseExpandableListAdapter
     public MyCategoriesExpandableListAdapter(Activity activity, ArrayList<HashMap<String, String>> parentItems,
                                              ArrayList<ArrayList<HashMap<String, String>>> childItems,boolean isFromMyCategoriesFragment) {
 
-        this.parentItems = parentItems;
-        this.childItems = childItems;
+        MyCategoriesExpandableListAdapter.parentItems = parentItems;
+        MyCategoriesExpandableListAdapter.childItems = childItems;
         this.activity = activity;
         this.isFromMyCategoriesFragment = isFromMyCategoriesFragment;
         inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);

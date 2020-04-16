@@ -33,7 +33,7 @@ public class GuideContentFragment extends Fragment {
 
          */
 
-        Toolbar toolbar = (Toolbar) view.findViewById(R.id.toolbar2);
+        Toolbar toolbar = view.findViewById(R.id.toolbar2);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -197,6 +197,7 @@ public class MyCategoriesExpandableListAdapter extends BaseExpandableListAdapter
         return convertView;
     }
 
+
     @Override
     public boolean isChildSelectable(int i, int i1) {
         return false;

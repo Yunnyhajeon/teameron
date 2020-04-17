@@ -323,7 +323,7 @@ public class ebook extends AppCompatActivity {
         } else if (_counter == 74) {
             myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Allergic_Reactions.html");
         } else if (_counter == 75) {
-            myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Allergic_Miscellaneous.html");
+            myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Miscellaneous.html");
         } else if (_counter == 76) {
             myWebView.loadUrl("file:///android_asset/part5_prevention/Prevention_Error.html");
         } else if (_counter == 77) {

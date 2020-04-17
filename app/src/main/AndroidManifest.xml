@@ -12,7 +12,6 @@
         android:theme="@style/AppTheme">
         <activity android:name=".tip_symptom_finder"></activity>
         <activity android:name=".SF_activity"></activity>
-        <activity android:name=".tip_symptom_finder"></activity>
         <activity
             android:name=".ebook"
             android:label="@string/title_activity_ebook"

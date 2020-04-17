@@ -19,6 +19,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
 import java.io.File;
@@ -44,6 +45,7 @@ public class tip_symptom_finder extends AppCompatActivity {
     private TextView Category, Symptom;
     String tipDir = "Tips";
     HashMap<Integer, List<String>> tipMap = new HashMap<>();
+    Toolbar toolbar;
 
     //@Nullable
     @Override
@@ -79,6 +81,14 @@ public class tip_symptom_finder extends AppCompatActivity {
         //Log.d("DEBUGGING", "matching numbers: " + tipMapKeys.toString());
 
         tip_recycler_view = findViewById(R.id.tipView);
+        toolbar = findViewById(R.id.tip_header);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+
         initData(tipMapKeys);
         initRecyclerView();
     }

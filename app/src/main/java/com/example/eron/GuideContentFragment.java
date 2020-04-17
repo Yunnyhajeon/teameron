@@ -21,17 +21,6 @@ public class GuideContentFragment extends Fragment {
         WebView webView = view.findViewById(R.id.guideWebView);
         webView.loadUrl(getArguments().getString("url"));
 
-        /*
-        home_btn = view.findViewById(R.id.homeBtn);
-        home_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getFragmentManager().beginTransaction().replace(R.id.fragment_container, new home_screen_fragment()).commit();
-
-            }
-        });
-
-         */
 
         Toolbar toolbar = view.findViewById(R.id.toolbar2);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {

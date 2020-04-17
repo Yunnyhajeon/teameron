@@ -628,7 +628,7 @@ public class ebook extends AppCompatActivity {
 
 
         //Part 4 - Pediatrics
-        headerItem = new MenuItemModel("Part 4: Pediatrics", "file:///android_asset/part4_pediatrics/Head_1_Pediatric_Headache.html", true, true);
+        headerItem = new MenuItemModel("Pediatrics", "file:///android_asset/part4_pediatrics/Head_1_Pediatric_Headache.html", true, true);
         headerList.add(headerItem);
         List<MenuItemModel> children15 = new ArrayList<>();
         childItem = new MenuItemModel("Headache", "file:///android_asset/part4_pediatrics/Head_1_Pediatric_Headache.html", true, false);

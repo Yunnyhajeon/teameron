@@ -33,7 +33,7 @@ public class TipRecyclerAdapter extends RecyclerView.Adapter<TipRecyclerAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.tags.setText(tipList.get(position).getTags());
+        holder.tags.setText("Symptoms: " + tipList.get(position).getTags());
         holder.number.setText(tipList.get(position).getNumber());
         holder.tip.setText(tipList.get(position).getTip());
         holder.body.setText(tipList.get(position).getBody());

@@ -36,7 +36,6 @@ public class SF_activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_s_f_activity);
 
-
         clear_btn = findViewById(R.id.clear_btn);
         clear_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,7 +43,6 @@ public class SF_activity extends AppCompatActivity {
                 clearAll();
             }
         });
-
 
         submit_btn = findViewById(R.id.submit_btn);
         //this moves to the next screen which shows the output of symptoms chosen
@@ -325,7 +323,6 @@ public class SF_activity extends AppCompatActivity {
             mapParent.put(ConstantManager.Parameter.IS_CHECKED,data.getIsChecked());
             childItems.add(childArrayList);
             parentItems.add(mapParent);
-
         }
 
         ConstantManager.parentItems = parentItems;

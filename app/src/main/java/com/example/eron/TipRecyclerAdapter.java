@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.cardview.widget.CardView;
 import android.widget.TextView;
 import android.widget.ImageView;
 import java.util.List;
@@ -50,6 +51,7 @@ public class TipRecyclerAdapter extends RecyclerView.Adapter<TipRecyclerAdapter.
         ImageView imageView;
         TextView tags, number, tip, body;
         ConstraintLayout expandableLayout;
+        CardView cardView;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -61,8 +63,9 @@ public class TipRecyclerAdapter extends RecyclerView.Adapter<TipRecyclerAdapter.
             body = itemView.findViewById(R.id.body);
 
             expandableLayout = itemView.findViewById(R.id.expandableLayout);
+            cardView = itemView.findViewById(R.id.cardView);
 
-            imageView.setOnClickListener(new View.OnClickListener() {
+            cardView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     Tip tip = tipList.get(getAdapterPosition());

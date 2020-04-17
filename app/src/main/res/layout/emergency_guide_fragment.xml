@@ -24,26 +24,6 @@
             android:drawableTint="#fff"
             />
 
-        <Button
-            android:id="@+id/house_btn"
-            android:layout_height="48dp"
-            android:layout_width="48dp"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="55dp"
-            android:background="@drawable/ic_home_black_24dp"
-            android:drawableTint="#fff"
-            />
-
-        <Button
-            android:id="@+id/settings_btn"
-            android:layout_height="48dp"
-            android:layout_width="48dp"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/ic_settings_black_24dp"
-            android:drawableTint="#fff"
-            />
-
-
 
         <TextView
             android:id="@+id/med_title"

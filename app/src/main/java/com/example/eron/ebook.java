@@ -123,10 +123,10 @@ public class ebook extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 _counter++;
-                if (_counter <= 81){
+                if (_counter <= 80){
                     getcounterpage(_counter);
                 } else {
-                    _counter = 82;
+                    _counter = 80;
                     getcounterpage(_counter);
                 }
             }
@@ -296,15 +296,13 @@ public class ebook extends AppCompatActivity {
             myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Miscellaneous.html");
         } else if (_counter == 76) {
             myWebView.loadUrl("file:///android_asset/part5_prevention/Prevention_Error.html");
-        } else if (_counter == 78) {
-            myWebView.loadUrl("file:///android_asset/appendices/");
-        } else if (_counter == 78) {
+        } else if (_counter == 77) {
             myWebView.loadUrl("file:///android_asset/appendices/appendixA.html");
-        } else if (_counter == 79) {
+        } else if (_counter == 78) {
             myWebView.loadUrl("file:///android_asset/appendices/appendixB.html");
-        } else if (_counter == 80) {
+        } else if (_counter == 79) {
             myWebView.loadUrl("file:///android_asset/appendices/appendixC.html");
-        } else if (_counter == 81) {
+        } else if (_counter == 80) {
             myWebView.loadUrl("file:///android_asset/appendices/appendixD.html");
         }
     }

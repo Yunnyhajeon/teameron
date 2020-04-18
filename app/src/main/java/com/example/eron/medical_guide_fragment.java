@@ -11,7 +11,10 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+
 public class medical_guide_fragment extends Fragment {
+
+
     Button home_btn, screenings_btn, child_temp_btn, breast_exam_btn, test_btn, belly_btn;
     @Nullable
     @Override
@@ -26,7 +29,6 @@ public class medical_guide_fragment extends Fragment {
 
             }
         });
-
 
 
         child_temp_btn = view.findViewById(R.id.child_temp_btn);
@@ -118,12 +120,11 @@ public class medical_guide_fragment extends Fragment {
 
     }
 
-    /*
-    @Override
-    public void onBackPressed() {
-        getFragmentManager().beginTransaction().replace(R.id.fragment_container, new home_screen_fragment()).commit();
-    }
 
-     */
 
 }
+
+/* //@Override
+    public void onBackPressed() {
+        getFragmentManager().beginTransaction().replace(R.id.fragment_container, new home_screen_fragment()).commit();
+    }*/

@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -23,12 +24,12 @@ public class GuideContentFragment extends Fragment {
         WebView webView = view.findViewById(R.id.guideWebView);
         webView.loadUrl(getArguments().getString("url"));
 
-
+        final String guideType = getArguments().getString("guideType");
         Toolbar toolbar = view.findViewById(R.id.toolbar2);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (getArguments().getString("guideType").equals("Emergency")) {
+                if (guideType.equals("Emergency")) {
                     getFragmentManager().beginTransaction().replace(R.id.fragment_container, new emergency_guide_fragment()).commit();
                 } else { //guideType="Medical"
                     getFragmentManager().beginTransaction().replace(R.id.fragment_container, new medical_guide_fragment()).commit();
@@ -50,6 +51,18 @@ public class GuideContentFragment extends Fragment {
                 return false;
             }
         });
+
+        OnBackPressedCallback callback = new OnBackPressedCallback(true /* enabled by default */) {
+            @Override
+            public void handleOnBackPressed() {
+                if (guideType.equals("Emergency")) {
+                    getFragmentManager().beginTransaction().replace(R.id.fragment_container, new emergency_guide_fragment()).commit();
+                } else { //guideType="Medical"
+                    getFragmentManager().beginTransaction().replace(R.id.fragment_container, new medical_guide_fragment()).commit();
+                }
+            }
+        };
+        requireActivity().getOnBackPressedDispatcher().addCallback(getViewLifecycleOwner(), callback);
 
         return view;
 

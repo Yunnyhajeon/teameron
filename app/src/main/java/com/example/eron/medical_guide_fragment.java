@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -16,7 +17,7 @@ public class medical_guide_fragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.medical_guide_fragment, container, false);
+        final View view = inflater.inflate(R.layout.medical_guide_fragment, container, false);
 
         home_btn = view.findViewById(R.id.home_btn_from_medical);
         home_btn.setOnClickListener(new View.OnClickListener() {
@@ -26,6 +27,14 @@ public class medical_guide_fragment extends Fragment {
 
             }
         });
+
+        OnBackPressedCallback callback = new OnBackPressedCallback(true /* enabled by default */) {
+            @Override
+            public void handleOnBackPressed() {
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, new home_screen_fragment()).commit();
+            }
+        };
+        requireActivity().getOnBackPressedDispatcher().addCallback(getViewLifecycleOwner(), callback);
 
 
 
@@ -118,12 +127,5 @@ public class medical_guide_fragment extends Fragment {
 
     }
 
-    /*
-    @Override
-    public void onBackPressed() {
-        getFragmentManager().beginTransaction().replace(R.id.fragment_container, new home_screen_fragment()).commit();
-    }
-
-     */
 
 }

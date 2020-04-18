@@ -50,7 +50,7 @@ public class tip_symptom_finder extends AppCompatActivity {
     String tipDir = "Tips";
     HashMap<Integer, List<String>> tipMap = new HashMap<>();
     Toolbar toolbar;
-    //Toast toast;
+    Toast toast;
 
     //@Nullable
     @Override
@@ -60,8 +60,8 @@ public class tip_symptom_finder extends AppCompatActivity {
         setContentView(R.layout.tip_symptom_finder1);
 
         //Instantiate here to get rid of infinite Toast
-//        toast = Toast.makeText(getApplicationContext(), "No tips match your symptoms, please try again with different symptoms.", Toast.LENGTH_LONG);
-//        toast.setGravity(Gravity.TOP, 0, 0);
+        toast = Toast.makeText(getApplicationContext(), "Here are the tips that match your selected symptoms.", Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.TOP, 0, 0);
 
 
         //Symptom = findViewById(R.id.child);
@@ -182,8 +182,7 @@ public class tip_symptom_finder extends AppCompatActivity {
                     }
                     tipMap.get(numMatches).add(tipFileName);
                 } else {
-                    //toast.show();
-                    Toast.makeText(getApplicationContext(), "Here are the tips that match your selected symptoms.", Toast.LENGTH_LONG).show();
+                    toast.show();
                 }
             }
 

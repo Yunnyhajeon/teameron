@@ -1,6 +1,5 @@
 package com.example.eron;
 
-import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +8,9 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -25,13 +27,13 @@ public class MyCategoriesExpandableListAdapter extends BaseExpandableListAdapter
     protected static ArrayList<HashMap<String, String>> parentItems;
     //    private final ArrayList<HashMap<String, String>> childItems;
     private LayoutInflater inflater;
-    private Activity activity;
+    private AppCompatActivity activity;
     private HashMap<String, String> child;
     private int count = 0;
     private boolean isFromMyCategoriesFragment;
 
-    public MyCategoriesExpandableListAdapter(Activity activity, ArrayList<HashMap<String, String>> parentItems,
-                                             ArrayList<ArrayList<HashMap<String, String>>> childItems,boolean isFromMyCategoriesFragment) {
+    public MyCategoriesExpandableListAdapter(AppCompatActivity activity, ArrayList<HashMap<String, String>> parentItems,
+                                             ArrayList<ArrayList<HashMap<String, String>>> childItems, boolean isFromMyCategoriesFragment) {
 
         MyCategoriesExpandableListAdapter.parentItems = parentItems;
         MyCategoriesExpandableListAdapter.childItems = childItems;

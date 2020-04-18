@@ -2,7 +2,7 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:fontFamily">@font/raleway_medium</item>
+        <item name="fontFamily">@font/raleway_medium</item>
         <item name="buttonStyle">@style/MyButton</item>
         <!-- Customize your theme here. -->
 <!--                <item name="colorPrimary">@color/colorPrimary</item>-->
@@ -20,6 +20,6 @@
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <style name="MyButton" parent="Widget.AppCompat.Button">
-        <item name="android:textAllCaps">false</item>
+        <item name="textAllCaps">false</item>
     </style>
 </resources>

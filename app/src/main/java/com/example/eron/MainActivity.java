@@ -14,16 +14,25 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new home_screen_fragment()).commit();
+
+
     }
 
-    /*
-    @Override
+
+   /* @Override
     public void onBackPressed() {
+        Fragment currentFragment = fragmentManager.findFragmentById(R.id.fragment_container);
+        fragmentManager.beginTransaction().remove(currentFragment).add(R.id.fragment_container, home_screen_fragment).addToBackStack(null).commit();
+
+
+        getFragmentManager().beginTransaction().replace(R.id.fragment_container, new home_screen_fragment()).commit();
+
+        getFragmentManager().beginTransaction().replace(R.id.fragment_container, new home_screen_fragment()).commit();
         Fragment currentFragment = getSupportFragmentManager().getFragments().get(getSupportFragmentManager().getBackStackEntryCount() - 1);
         if (currentFragment instanceof OnBackPressed) {
             ((OnBackPressed) currentFragment).onBackPressed();
         }
         super.onBackPressed();
-    }
-     */
+    }*/
+
 }

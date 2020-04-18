@@ -68,7 +68,7 @@ public class emergency_guide_fragment extends Fragment {
                 Bundle args = new Bundle();
                 args.putString("url", "file:///android_asset/EmergencyGuides/Choking.html");
                 args.putString("guideType", "Emergency");
-                args.putString("title", "How to Stop Choking");
+                args.putString("title", "How to Prevent Choking");
 
                 fr.setArguments(args);
                 ft.replace(R.id.fragment_container, fr);

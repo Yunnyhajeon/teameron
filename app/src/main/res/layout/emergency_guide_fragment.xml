@@ -49,6 +49,7 @@
             />
 
     </RelativeLayout>
+
     <Button
         android:id="@+id/choking_btn"
         android:layout_width="150dp"
@@ -58,14 +59,32 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginStart="139dp"
-        android:layout_marginLeft="139dp"
-        android:layout_marginTop="325dp"
-        android:layout_marginEnd="138dp"
-        android:layout_marginRight="138dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginLeft="49dp"
+        android:layout_marginTop="324dp"
+        android:layout_marginEnd="228dp"
+        android:layout_marginRight="228dp"
         android:background="@drawable/buttonbordershadow"
         android:fontFamily="@font/raleway_medium"
         android:text="How to Prevent Choking" />
+
+    <Button
+        android:id="@+id/passing_out_btn"
+        android:layout_width="150dp"
+        android:layout_height="117dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="229dp"
+        android:layout_marginLeft="229dp"
+        android:layout_marginTop="323dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        android:background="@drawable/buttonbordershadow"
+        android:fontFamily="@font/raleway_medium"
+        android:text="Loss of Consciousness" />
 
     <Button
         android:id="@+id/home_btn_from_emergency"

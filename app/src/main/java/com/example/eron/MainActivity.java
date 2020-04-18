@@ -2,6 +2,8 @@ package com.example.eron;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.activity.OnBackPressedDispatcher;
+import androidx.activity.OnBackPressedCallback;
 
 import android.os.Bundle;
 import android.view.View;

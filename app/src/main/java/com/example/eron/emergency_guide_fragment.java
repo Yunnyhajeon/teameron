@@ -7,10 +7,12 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import androidx.activity.OnBackPressedCallback;
+import androidx.activity.OnBackPressedDispatcher;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 public class emergency_guide_fragment extends Fragment {
     Button home_btn, CPR_btn, choking_btn;
@@ -45,7 +47,7 @@ public class emergency_guide_fragment extends Fragment {
             public void onClick(View v) {
                 Fragment fr=new GuideContentFragment();
                 FragmentManager fm=getFragmentManager();
-                androidx.fragment.app.FragmentTransaction ft=fm.beginTransaction();
+                FragmentTransaction ft=fm.beginTransaction();
                 Bundle args = new Bundle();
                 args.putString("url", "file:///android_asset/EmergencyGuides/CPR.html");
                 args.putString("guideType", "Emergency");
@@ -62,7 +64,7 @@ public class emergency_guide_fragment extends Fragment {
             public void onClick(View v) {
                 Fragment fr=new GuideContentFragment();
                 FragmentManager fm=getFragmentManager();
-                androidx.fragment.app.FragmentTransaction ft=fm.beginTransaction();
+                FragmentTransaction ft=fm.beginTransaction();
                 Bundle args = new Bundle();
                 args.putString("url", "file:///android_asset/EmergencyGuides/Choking.html");
                 args.putString("guideType", "Emergency");

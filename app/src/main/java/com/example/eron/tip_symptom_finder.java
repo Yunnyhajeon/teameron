@@ -3,6 +3,7 @@ package com.example.eron;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -49,6 +50,7 @@ public class tip_symptom_finder extends AppCompatActivity {
     String tipDir = "Tips";
     HashMap<Integer, List<String>> tipMap = new HashMap<>();
     Toolbar toolbar;
+    Toast toast;
 
     //@Nullable
     @Override
@@ -56,6 +58,11 @@ public class tip_symptom_finder extends AppCompatActivity {
         //View view = inflater.inflate(R.layout.tip_symptom_finder1, container, false);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tip_symptom_finder1);
+
+        //Instantiate here to get rid of infinite Toast
+        toast = Toast.makeText(getApplicationContext(), "Here are the tips that match your selected symptoms.", Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.TOP, 0, 0);
+
 
         //Symptom = findViewById(R.id.child);
         List<String> symptomList = new ArrayList<String>();
@@ -175,7 +182,7 @@ public class tip_symptom_finder extends AppCompatActivity {
                     }
                     tipMap.get(numMatches).add(tipFileName);
                 } else {
-                    Toast.makeText(getApplicationContext(),"No tips match your symptoms, please try again with different symptoms.",Toast.LENGTH_LONG).show();
+                    toast.show();
                 }
             }
 

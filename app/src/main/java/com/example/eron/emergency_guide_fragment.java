@@ -15,7 +15,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 public class emergency_guide_fragment extends Fragment {
-    Button home_btn, CPR_btn, choking_btn;
+    Button home_btn, CPR_btn, choking_btn, passing_out_btn;
 
     @Nullable
     @Override
@@ -68,7 +68,7 @@ public class emergency_guide_fragment extends Fragment {
                 Bundle args = new Bundle();
                 args.putString("url", "file:///android_asset/EmergencyGuides/Choking.html");
                 args.putString("guideType", "Emergency");
-                args.putString("title", "How to Stop Choking");
+                args.putString("title", "Choking");
 
                 fr.setArguments(args);
                 ft.replace(R.id.fragment_container, fr);
@@ -76,7 +76,23 @@ public class emergency_guide_fragment extends Fragment {
             }
         });
 
+        passing_out_btn = view.findViewById(R.id.passing_out_btn);
+        passing_out_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fr=new GuideContentFragment();
+                FragmentManager fm=getFragmentManager();
+                FragmentTransaction ft=fm.beginTransaction();
+                Bundle args = new Bundle();
+                args.putString("url", "file:///android_asset/EmergencyGuides/LossOfConsciousness.html");
+                args.putString("guideType", "Emergency");
+                args.putString("title", "Loss of Consciousness");
 
+                fr.setArguments(args);
+                ft.replace(R.id.fragment_container, fr);
+                ft.commit();
+            }
+        });
 
         return view;
 

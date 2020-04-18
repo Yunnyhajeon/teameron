@@ -174,6 +174,8 @@ public class tip_symptom_finder extends AppCompatActivity {
                         tipMap.put(numMatches, tips);
                     }
                     tipMap.get(numMatches).add(tipFileName);
+                } else {
+                    Toast.makeText(getApplicationContext(),"No tips match your symptoms, please try again with different symptoms.",Toast.LENGTH_LONG).show();
                 }
             }
 

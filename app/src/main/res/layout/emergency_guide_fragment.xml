@@ -66,7 +66,7 @@
         android:layout_marginRight="228dp"
         android:background="@drawable/buttonbordershadow"
         android:fontFamily="@font/raleway_medium"
-        android:text="How to Prevent Choking" />
+        android:text="Choking" />
 
     <Button
         android:id="@+id/passing_out_btn"

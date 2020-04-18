@@ -34,39 +34,57 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class ebook extends AppCompatActivity {
+import android.widget.ViewFlipper;
+import android.app.Activity;
+import android.app.ProgressDialog;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.os.Handler;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.Button;
+import android.widget.ViewFlipper;
 
-    private AppBarConfiguration mAppBarConfiguration;
+import android.view.View.OnClickListener;
+
+
+
+
+public class ebook extends AppCompatActivity {
 
     ExpandableListAdapter expandableListAdapter;
     ExpandableListView expandableListView;
     List<MenuItemModel> headerList = new ArrayList<>();
     HashMap<MenuItemModel, List<MenuItemModel>> childList = new HashMap<>();
 
-    Button prevBtn, nextBtn;
-    MenuItemModel prevSection, nextSection;
-    int currentSection;
+    private static int _counter = 0;
+    private Button _decrease;
+    private Button _increase;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ebook);
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Red Light Warning Signals");
 
-
         expandableListView = findViewById(R.id.expandable_list_view);
         prepareMenuData();
         populateExpandableList();
-
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         
@@ -78,20 +96,219 @@ public class ebook extends AppCompatActivity {
                 return true;
             }
         });
-        /*
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_discove_more, R.id.nav_table_of_contents,
-                R.id.nav_HEADS, R.id.nav_ear_nose_throat_neck, R.id.arms_and_hands)
-                .setDrawerLayout(drawer)
-                .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
-        NavigationUI.setupWithNavController(navigationView, navController);
 
-         */
+
+        WebView myWebView = (WebView) findViewById(R.id.menu_content_webview);
+        getcounterpage(_counter);
+
+        _decrease = (Button) findViewById(R.id.button1);
+        _increase = (Button) findViewById(R.id.button2);
+
+        _decrease.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                _counter--;
+                if (_counter >= 0) {
+                    getcounterpage(_counter);
+                } else {
+                    _counter = 0;
+                    getcounterpage(_counter);
+                }
+
+            }
+        });
+
+        _increase.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                _counter++;
+                if (_counter <= 81){
+                    getcounterpage(_counter);
+                } else {
+                    _counter = 82;
+                    getcounterpage(_counter);
+                }
+            }
+        });
+
     }
+
+
+    /*public void previousView(View v) {
+        WebView myWebView = (WebView) findViewById(R.id.webview);
+        myWebView.loadUrl("file:///android_asset/part1_bodyparts/Head_1_Headache.html");
+    }*/
+
+    public void getcounterpage(int _counter){
+        WebView myWebView = (WebView) findViewById(R.id.menu_content_webview);
+        if (_counter == 0) {
+            myWebView.loadUrl("file:///android_asset/appendices/titlepage.html");
+        } else if (_counter == 1) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Head_1_Headache.html");
+        } else if (_counter == 2) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Head_2_HeadInjury.html");
+        } else if (_counter == 3) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Head_3_PsychologicalProblems.html");
+        } else if (_counter == 4) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Eyes_1_Eyelids.html");
+        } else if (_counter == 5) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Eyes_2_Vision_Abnormalities.html");
+        } else if (_counter == 6) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Eyes_3_Eye_Pain.html");
+        } else if (_counter == 7) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Ear, Nose, Mouth, Throat, and Neck_1_Ear.html");
+        } else if (_counter == 8) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Ear, Nose, Mouth, Throat, and Neck_2_Nose.html");
+        } else if (_counter == 9) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Ear, Nose, Mouth, Throat, and Neck_3_Mouth.html");
+        } else if (_counter == 10) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Ear, Nose, Mouth, Throat, and Neck_4_Throat.html");
+        } else if (_counter == 11) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Ear, Nose, Mouth, Throat, and Neck_5_Neck.html");
+        } else if (_counter == 12) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Arms and Hands_1_Armpits.html");
+        } else if (_counter == 13) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Arms and Hands_2_Arms.html");
+        } else if (_counter == 14) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Arms and Hands_3_Hands.html");
+        } else if (_counter == 15) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Arms and Hands_4_Fingers.html");
+        } else if (_counter == 16) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Arms and Hands_5_Fingernails.html");
+        } else if (_counter == 17) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Breast.html");
+        } else if (_counter == 18) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Chest Area_1_Breathing_Difficulties.html");
+        } else if (_counter == 19) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Chest Area_2_Cough.html");
+        } else if (_counter == 20) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Chest Area_3_Chest Pain and Discomfort.html");
+        } else if (_counter == 21) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Chest Area_4_Irregular Heartbeats and Heart Sounds.html");
+        } else if (_counter == 22) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Belly, Stomach Area, or Abdomen_1_How to Assess Belly Pain.html");
+        } else if (_counter == 23) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Belly, Stomach Area, or Abdomen_2_Indigestion.html");
+        } else if (_counter == 24) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Belly, Stomach Area, or Abdomen_3_Belly Pain.html");
+        } else if (_counter == 25) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Belly, Stomach Area, or Abdomen_4_Bulges and Swelling in the Belly.html");
+        } else if (_counter == 26) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Belly, Stomach Area, or Abdomen_5_Sense of Fullness.html");
+        } else if (_counter == 27) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Genitalia_1_Male.html");
+        } else if (_counter == 28) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Genitalia_2_Genders.html");
+        } else if (_counter == 29) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Genitalia_3_Female.html");
+        } else if (_counter == 30) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Bowel Movement_1_Pain.html");
+        } else if (_counter == 31) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Bowel Movement_2_Form and Frequency.html");
+        } else if (_counter == 32) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Bowel Movement_3_Color.html");
+        } else if (_counter == 33) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Urine_1_Appearance.html");
+        } else if (_counter == 34) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Urine_2_Discomfort.html");
+        } else if (_counter == 35) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Urine_3_Frequency.html");
+        } else if (_counter == 36) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Menstruation_1.html");
+        } else if (_counter == 37) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Menstruation_2.html");
+        } else if (_counter == 38) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Menstruation_3.html");
+        } else if (_counter == 39) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Menstruation_4.html");
+        } else if (_counter == 40) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Groin.html");
+        } else if (_counter == 41) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/HBLA_1.html");
+        } else if (_counter == 42) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/HBLA_2.html");
+        } else if (_counter == 43) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Skin_1_Bites.html");
+        } else if (_counter == 44) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Skin_2_Discolorations.html");
+        } else if (_counter == 45) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Skin_3_Freckles, Moles, Bumps, Warts, Lumps, Plaques, and Patches.html");
+        } else if (_counter == 46) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Skin_4_Infections.html");
+        } else if (_counter == 47) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Skin_5_Itchy Skin.html");
+        } else if (_counter == 48) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Skin_6_Rashes.html");
+        } else if (_counter == 49) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Skin_7_Sores.html");
+        } else if (_counter == 50) {
+            myWebView.loadUrl("file:///android_asset/part1_bodyparts/Back_1_Back Pain.html");
+        } else if (_counter == 51) {
+            myWebView.loadUrl("file:///android_asset/part2_SymptomsAndSigns/Allergic Reactions.html");
+        } else if (_counter == 52) {
+            myWebView.loadUrl("file:///android_asset/part2_SymptomsAndSigns/Blood And Blood Pressure.html");
+        } else if (_counter == 53) {
+            myWebView.loadUrl("file:///android_asset/part2_SymptomsAndSigns/Dehydration.html");
+        } else if (_counter == 54) {
+            myWebView.loadUrl("file:///android_asset/part2_SymptomsAndSigns/Fever.html");
+        } else if (_counter == 55) {
+            myWebView.loadUrl("file:///android_asset/part2_SymptomsAndSigns/Medication.html");
+        } else if (_counter == 56) {
+            myWebView.loadUrl("file:///android_asset/part2_SymptomsAndSigns/Passing Out, Loss of Consciousness.html");
+        } else if (_counter == 57) {
+            myWebView.loadUrl("file:///android_asset/part2_SymptomsAndSigns/Temperature Change.html");
+        } else if (_counter == 58) {
+            myWebView.loadUrl("file:///android_asset/part2_SymptomsAndSigns/Weakness.html");
+        } else if (_counter == 59) {
+            myWebView.loadUrl("file:///android_asset/part2_SymptomsAndSigns/Weight Loss.html");
+        } else if (_counter == 60) {
+            myWebView.loadUrl("file:///android_asset/part3_pregnancy/Pregnancy_and_Postpregnancy.html");
+        } else if (_counter == 61) {
+            myWebView.loadUrl("file:///android_asset/part4_pediatrics/Head_1_Pediatric_Headache.html");
+        } else if (_counter == 62) {
+            myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_PsychologicalProblems.html");
+        } else if (_counter == 63) {
+            myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Eyes.html");
+        } else if (_counter == 64) {
+            myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Throat.html");
+        } else if (_counter == 65) {
+            myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Arms_Hands_Fingers_Nails.html");
+        } else if (_counter == 66) {
+            myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Back.html");
+        } else if (_counter == 67) {
+            myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Chest.html");
+        } else if (_counter == 68) {
+            myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Belly.html");
+        } else if (_counter == 69) {
+            myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Urine.html");
+        } else if (_counter == 70) {
+            myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Bowel_Movement.html");
+        } else if (_counter == 71) {
+            myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Genitalia.html");
+        } else if (_counter == 72) {
+            myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Legs.html");
+        } else if (_counter == 73) {
+            myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Skin_Hair.html");
+        } else if (_counter == 74) {
+            myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Allergic_Reactions.html");
+        } else if (_counter == 75) {
+            myWebView.loadUrl("file:///android_asset/part4_pediatrics/Pediatric_Allergic_Miscellaneous.html");
+        } else if (_counter == 76) {
+            myWebView.loadUrl("file:///android_asset/part5_prevention/Prevention_Error.html");
+        } else if (_counter == 77) {
+            myWebView.loadUrl("file:///android_asset/appendices/");
+        } else if (_counter == 78) {
+            myWebView.loadUrl("file:///android_asset/appendices/appendixA.html");
+        } else if (_counter == 79) {
+            myWebView.loadUrl("file:///android_asset/appendices/appendixB.html");
+        } else if (_counter == 80) {
+            myWebView.loadUrl("file:///android_asset/appendices/appendixC.html");
+        } else if (_counter == 81) {
+            myWebView.loadUrl("file:///android_asset/appendices/appendixD.html");
+        }
+    }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -99,14 +316,11 @@ public class ebook extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
 
-        /*
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.home_icon) {
+            onBackPressed();
             return true;
         }
-         */
 
         return super.onOptionsItemSelected(item);
     }
@@ -114,33 +328,9 @@ public class ebook extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.settings_menu, menu);
+        getMenuInflater().inflate(R.menu.home, menu);
         return true;
     }
-
-    /*
-    @Override
-    public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        return NavigationUI.navigateUp(navController, mAppBarConfiguration)
-                || super.onSupportNavigateUp();
-    }
-
-     */
-
-    /*
-    @Override
-    public void onBackPressed() {
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
-
-    }
-    */
 
 
     private void prepareMenuData() {
@@ -381,7 +571,7 @@ public class ebook extends AppCompatActivity {
 
 
         //Part 4 - Pediatrics
-        headerItem = new MenuItemModel("Part 4: Pediatrics", "file:///android_asset/part4_pediatrics/Head_1_Pediatric_Headache.html", true, true);
+        headerItem = new MenuItemModel("Pediatrics", "file:///android_asset/part4_pediatrics/Head_1_Pediatric_Headache.html", true, true);
         headerList.add(headerItem);
         List<MenuItemModel> children15 = new ArrayList<>();
         childItem = new MenuItemModel("Headache", "file:///android_asset/part4_pediatrics/Head_1_Pediatric_Headache.html", true, false);
@@ -438,15 +628,26 @@ public class ebook extends AppCompatActivity {
         childList.put(headerItem, children0);
     }
 
+
+    private void setOnClick(final Button btn, final int p){
+        btn.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                WebView webView = (WebView) findViewById(R.id.menu_content_webview);
+                webView.loadUrl(headerList.get(p).htmlUrl);
+                // Do whatever you want(str can be used here)
+
+            }
+        });
+    }
+
     private void populateExpandableList() {
         expandableListAdapter = new ExpandableListAdapter(this, headerList, childList);
         expandableListView.setAdapter(expandableListAdapter);
 
-
         expandableListView.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
             @Override
             public boolean onGroupClick(ExpandableListView parent, View v, int groupPosition, long id) {
-
                 if (headerList.get(groupPosition).isGroup) {
                     if (!headerList.get(groupPosition).hasChildren) {
                         //setContentView(R.layout.menu_item_content);
@@ -457,9 +658,52 @@ public class ebook extends AppCompatActivity {
                         if (webView == null) {
                             Log.i("WebViewNullCheck", "WebView is NULL!!!");
                         } else {
+                            if (groupPosition == 0){
+                                _counter = 1;
+                            }else if (groupPosition == 1) {
+                                _counter = 4;
+                            }else if (groupPosition == 2){
+                                _counter = 7;
+                            }else if (groupPosition == 3) {
+                                _counter = 12;
+                            }else if (groupPosition == 4){
+                                _counter = 17;
+                            }else if (groupPosition == 5) {
+                                _counter = 18;
+                            }else if (groupPosition == 6){
+                                _counter = 22;
+                            }else if (groupPosition == 7) {
+                                _counter = 27;
+                            }else if (groupPosition == 8){
+                                _counter = 30;
+                            }else if (groupPosition == 9) {
+                                _counter = 33;
+                            }else if (groupPosition == 10){
+                                _counter = 36;
+                            }else if (groupPosition == 11) {
+                                _counter = 40;
+                            }else if (groupPosition == 12){
+                                _counter = 41;
+                            }else if (groupPosition == 13) {
+                                _counter = 43;
+                            }else if (groupPosition == 14){
+                                _counter = 50;
+                            }else if (groupPosition == 15) {
+                                _counter = 51;
+                            }else if (groupPosition == 16){
+                                _counter = 60;
+                            }else if (groupPosition == 17) {
+                                _counter = 61;
+                            }else if (groupPosition == 18){
+                                _counter = 76;
+                            }else if (groupPosition == 19) {
+                                _counter = 77;
+                            }
+
                             Log.i("URL", headerList.get(groupPosition).htmlUrl);
                             webView.loadUrl(headerList.get(groupPosition).htmlUrl);
                             LinearLayout myLayout = (LinearLayout) findViewById(R.id.cover);
+
                             for ( int i = 0; i < myLayout.getChildCount();  i++ ){
                                 View view = myLayout.getChildAt(i);
                                 view.setVisibility(View.GONE);
@@ -489,11 +733,52 @@ public class ebook extends AppCompatActivity {
                         if (webView == null) {
                             Log.i("WebViewNullCheck", "WebView is NULL!!!");
                         } else {
+                            if (groupPosition == 0){
+                                _counter = 1+childPosition;
+                            }else if (groupPosition == 1) {
+                                _counter = 4+childPosition;
+                            }else if (groupPosition == 2){
+                                _counter = 7+childPosition;
+                            }else if (groupPosition == 3) {
+                                _counter = 12+childPosition;
+                            }else if (groupPosition == 4){
+                                _counter = 17+childPosition;
+                            }else if (groupPosition == 5) {
+                                _counter = 18+childPosition;
+                            }else if (groupPosition == 6){
+                                _counter = 22+childPosition;
+                            }else if (groupPosition == 7) {
+                                _counter = 27+childPosition;
+                            }else if (groupPosition == 8){
+                                _counter = 30+childPosition;
+                            }else if (groupPosition == 9) {
+                                _counter = 33+childPosition;
+                            }else if (groupPosition == 10){
+                                _counter = 36+childPosition;
+                            }else if (groupPosition == 11) {
+                                _counter = 40+childPosition;
+                            }else if (groupPosition == 12){
+                                _counter = 41+childPosition;
+                            }else if (groupPosition == 13) {
+                                _counter = 43+childPosition;
+                            }else if (groupPosition == 14){
+                                _counter = 50+childPosition;
+                            }else if (groupPosition == 15) {
+                                _counter = 51+childPosition;
+                            }else if (groupPosition == 16){
+                                _counter = 60+childPosition;
+                            }else if (groupPosition == 17) {
+                                _counter = 61+childPosition;
+                            }else if (groupPosition == 18){
+                                _counter = 76+childPosition;
+                            }else if (groupPosition == 19) {
+                                _counter = 77+childPosition;
+                            }
                             Log.i("URL", headerList.get(groupPosition).htmlUrl);
                             webView.loadUrl(model.htmlUrl);
-
                             LinearLayout myLayout = (LinearLayout) findViewById(R.id.cover);
-                            for ( int i = 0; i < myLayout.getChildCount();  i++ ){
+
+                            for (int i = 0; i < myLayout.getChildCount(); i++ ){
                                 View view = myLayout.getChildAt(i);
                                 view.setVisibility(View.GONE);
                             }

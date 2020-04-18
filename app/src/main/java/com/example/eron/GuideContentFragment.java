@@ -2,6 +2,8 @@ package com.example.eron;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -22,7 +24,7 @@ public class GuideContentFragment extends Fragment {
         webView.loadUrl(getArguments().getString("url"));
 
 
-        Toolbar toolbar = (Toolbar) view.findViewById(R.id.toolbar2);
+        Toolbar toolbar = view.findViewById(R.id.toolbar2);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -36,7 +38,21 @@ public class GuideContentFragment extends Fragment {
 
         toolbar.setTitle(getArguments().getString("title"));
 
+        toolbar.inflateMenu(R.menu.home);
+        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                int id = item.getItemId();
+                if (id == R.id.home_icon) {
+                    getFragmentManager().beginTransaction().replace(R.id.fragment_container, new home_screen_fragment()).commit();
+                    return true;
+                }
+                return false;
+            }
+        });
+
         return view;
 
     }
+
 }

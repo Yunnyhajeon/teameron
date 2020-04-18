@@ -1,8 +1,11 @@
 package com.example.eron;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -25,6 +28,7 @@ import androidx.fragment.app.Fragment;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
@@ -85,6 +89,20 @@ public class tip_symptom_finder extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 onBackPressed();
+            }
+        });
+        toolbar.inflateMenu(R.menu.home);
+        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                int id = item.getItemId();
+                if (id == R.id.home_icon) {
+                    Intent intent = new Intent(tip_symptom_finder.this,MainActivity.class);
+                    finish();
+                    startActivity(intent);
+                    return true;
+                }
+                return false;
             }
         });
 
@@ -190,7 +208,7 @@ public class tip_symptom_finder extends AppCompatActivity {
         Writer writer = new StringWriter();
         char[] buffer = new char[1024];
         try {
-            Reader reader = new BufferedReader(new InputStreamReader(in, "UTF-8"));
+            Reader reader = new BufferedReader(new InputStreamReader(in, StandardCharsets.UTF_8));
             int n;
             while ((n = reader.read(buffer)) != -1) {
                 writer.write(buffer, 0, n);
@@ -199,4 +217,6 @@ public class tip_symptom_finder extends AppCompatActivity {
         }
         return writer.toString();
     }
+
+
 }

@@ -17,6 +17,7 @@ public class medical_guide_fragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.medical_guide_fragment, container, false);
+
         home_btn = view.findViewById(R.id.home_btn_from_medical);
         home_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -116,4 +117,13 @@ public class medical_guide_fragment extends Fragment {
         return view;
 
     }
+
+    /*
+    @Override
+    public void onBackPressed() {
+        getFragmentManager().beginTransaction().replace(R.id.fragment_container, new home_screen_fragment()).commit();
+    }
+
+     */
+
 }

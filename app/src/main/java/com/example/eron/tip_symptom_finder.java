@@ -1,8 +1,11 @@
 package com.example.eron;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -86,6 +89,20 @@ public class tip_symptom_finder extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 onBackPressed();
+            }
+        });
+        toolbar.inflateMenu(R.menu.home);
+        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                int id = item.getItemId();
+                if (id == R.id.home_icon) {
+                    Intent intent = new Intent(tip_symptom_finder.this,MainActivity.class);
+                    finish();
+                    startActivity(intent);
+                    return true;
+                }
+                return false;
             }
         });
 
@@ -200,4 +217,6 @@ public class tip_symptom_finder extends AppCompatActivity {
         }
         return writer.toString();
     }
+
+
 }

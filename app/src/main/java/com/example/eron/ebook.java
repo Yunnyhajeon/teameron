@@ -56,22 +56,10 @@ import android.view.View.OnClickListener;
 
 public class ebook extends AppCompatActivity {
 
-    private AppBarConfiguration mAppBarConfiguration;
-
     ExpandableListAdapter expandableListAdapter;
     ExpandableListView expandableListView;
     List<MenuItemModel> headerList = new ArrayList<>();
     HashMap<MenuItemModel, List<MenuItemModel>> childList = new HashMap<>();
-
-    Button prevBtn, nextBtn;
-    MenuItemModel prevSection, nextSection;
-    int currentSection;
-
-    private ViewFlipper flipview;
-    private WebView mainView;
-    private WebView catView;
-    private WebView searchView;
-
 
     private static int _counter = 0;
     private Button _decrease;
@@ -109,25 +97,7 @@ public class ebook extends AppCompatActivity {
             }
         });
 
-        /*
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_discove_more, R.id.nav_table_of_contents,
-                R.id.nav_HEADS, R.id.nav_ear_nose_throat_neck, R.id.arms_and_hands)
-                .setDrawerLayout(drawer)
-                .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
-        NavigationUI.setupWithNavController(navigationView, navController);
 
-         */
-
-        /*WebView mWebView = null;
-        mWebView.getSettings().setJavaScriptEnabled(true);
-        mWebView.loadUrl("file:///android_asset/part1_bodyparts/Head_1_Headache.html");
-        viewFlipper.addView(mWebView);*/
-        //WebView myWebView = (WebView) findViewById(R.id.webview);
         WebView myWebView = (WebView) findViewById(R.id.menu_content_webview);
         getcounterpage(_counter);
 
@@ -346,14 +316,11 @@ public class ebook extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
 
-        /*
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.home_icon) {
+            onBackPressed();
             return true;
         }
-         */
 
         return super.onOptionsItemSelected(item);
     }
@@ -361,33 +328,9 @@ public class ebook extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.settings_menu, menu);
+        getMenuInflater().inflate(R.menu.home, menu);
         return true;
     }
-
-    /*
-    @Override
-    public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        return NavigationUI.navigateUp(navController, mAppBarConfiguration)
-                || super.onSupportNavigateUp();
-    }
-
-     */
-
-    /*
-    @Override
-    public void onBackPressed() {
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
-
-    }
-    */
 
 
     private void prepareMenuData() {

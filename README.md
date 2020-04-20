@@ -2,6 +2,8 @@
 
 Should I Go to the ER?
 
+Download or select "Raw" from the tab in the top right on GitHub to make reading easier.
+
 App Overview: Our product is an Android application based on the book Your Body’s Red Light Warning Signals written by our client: Dr. Neil Shulman. This project addresses the problem: “When should people go to the emergency room?” Going to the emergency room can cost hundreds or thousands of dollars. Thus, people are disinclined to go to the emergency room when they are uncertain about their symptoms. This can be life threatening, especially when serious symptoms aren’t obvious or visible. Our project seeks to enable people, especially people without medical expertise, to evaluate physical symptoms and make a more educated decision over whether or not they go to the emergency room.
 
 Our final product has 4 main parts. The E-book is the full, original book made accessible to our app users. The Medical and Emergency Guides highlight key self-examination guides and procedures on what to do in emergency situations. The Symptom Finder will enable users to input their experiences and be guided to potential causes.
